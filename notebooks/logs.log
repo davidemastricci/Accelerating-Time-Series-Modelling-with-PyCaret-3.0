@@ -1,0 +1,1667 @@
+2023-06-30 16:05:28,483:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-06-30 16:05:28,483:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-06-30 16:05:28,483:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-06-30 16:05:28,483:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-06-30 16:05:28,705:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 16:47:30,723:INFO:PyCaret TSForecastingExperiment
+2023-06-30 16:47:30,724:INFO:Logging name: ts-default-name
+2023-06-30 16:47:30,724:INFO:ML Usecase: MLUsecase.TIME_SERIES
+2023-06-30 16:47:30,724:INFO:version 3.0.3
+2023-06-30 16:47:30,724:INFO:Initializing setup()
+2023-06-30 16:47:30,724:INFO:self.USI: b610
+2023-06-30 16:47:30,724:INFO:self._variable_keys: {'y_transformed', 'y_train', 'significant_sps', 'X_test_transformed', 'fold_param', 'USI', 'X', 'enforce_exogenous', 'strictly_positive', 'idx', 'significant_sps_no_harmonics', 'fh', 'exogenous_present', 'X_transformed', 'X_train', 'html_param', 'n_jobs_param', 'enforce_pi', 'data', 'y_test_transformed', 'pipeline', 'exp_id', '_ml_usecase', 'y_test', 'candidate_sps', 'y', 'all_sps_to_use', 'index_type', 'primary_sp_to_use', 'y_train_transformed', 'model_engines', 'log_plots_param', 'approach_type', 'logging_param', 'X_test', 'seed', 'gpu_param', 'X_train_transformed', '_available_plots', 'gpu_n_jobs_param', 'fold_generator', 'exp_name_log', 'memory', 'seasonality_present'}
+2023-06-30 16:47:30,724:INFO:Checking environment
+2023-06-30 16:47:30,724:INFO:python_version: 3.10.8
+2023-06-30 16:47:30,724:INFO:python_build: ('main', 'Jun 15 2023 01:39:58')
+2023-06-30 16:47:30,724:INFO:machine: x86_64
+2023-06-30 16:47:30,724:INFO:platform: Linux-5.15.0-1041-azure-x86_64-with-glibc2.31
+2023-06-30 16:47:30,725:INFO:Memory: svmem(total=8325152768, available=5207224320, percent=37.5, used=2783830016, free=226635776, active=1013104640, inactive=6215938048, buffers=276668416, cached=5038018560, shared=4468736, slab=653484032)
+2023-06-30 16:47:30,726:INFO:Physical Core: 2
+2023-06-30 16:47:30,726:INFO:Logical Core: 4
+2023-06-30 16:47:30,726:INFO:Checking libraries
+2023-06-30 16:47:30,726:INFO:System:
+2023-06-30 16:47:30,726:INFO:    python: 3.10.8 (main, Jun 15 2023, 01:39:58) [GCC 9.4.0]
+2023-06-30 16:47:30,726:INFO:executable: /home/codespace/.python/current/bin/python3
+2023-06-30 16:47:30,726:INFO:   machine: Linux-5.15.0-1041-azure-x86_64-with-glibc2.31
+2023-06-30 16:47:30,726:INFO:PyCaret required dependencies:
+2023-06-30 16:47:30,728:INFO:                 pip: 23.1.2
+2023-06-30 16:47:30,728:INFO:          setuptools: 67.8.0
+2023-06-30 16:47:30,728:INFO:             pycaret: 3.0.3
+2023-06-30 16:47:30,728:INFO:             IPython: 7.34.0
+2023-06-30 16:47:30,729:INFO:          ipywidgets: 7.7.1
+2023-06-30 16:47:30,729:INFO:                tqdm: 4.64.0
+2023-06-30 16:47:30,729:INFO:               numpy: 1.23.0
+2023-06-30 16:47:30,729:INFO:              pandas: 1.5.3
+2023-06-30 16:47:30,729:INFO:              jinja2: 3.1.2
+2023-06-30 16:47:30,729:INFO:               scipy: 1.10.1
+2023-06-30 16:47:30,729:INFO:              joblib: 1.2.0
+2023-06-30 16:47:30,729:INFO:             sklearn: 1.2.2
+2023-06-30 16:47:30,729:INFO:                pyod: 1.1.0
+2023-06-30 16:47:30,729:INFO:            imblearn: 0.10.1
+2023-06-30 16:47:30,729:INFO:   category_encoders: 2.6.1
+2023-06-30 16:47:30,729:INFO:            lightgbm: 3.3.5
+2023-06-30 16:47:30,729:INFO:               numba: 0.57.1
+2023-06-30 16:47:30,729:INFO:            requests: 2.31.0
+2023-06-30 16:47:30,729:INFO:          matplotlib: 3.7.0
+2023-06-30 16:47:30,729:INFO:          scikitplot: 0.3.7
+2023-06-30 16:47:30,729:INFO:         yellowbrick: 1.5
+2023-06-30 16:47:30,729:INFO:              plotly: 5.15.0
+2023-06-30 16:47:30,730:INFO:    plotly-resampler: Not installed
+2023-06-30 16:47:30,730:INFO:             kaleido: 0.2.1
+2023-06-30 16:47:30,730:INFO:           schemdraw: 0.15
+2023-06-30 16:47:30,730:INFO:         statsmodels: 0.14.0
+2023-06-30 16:47:30,730:INFO:              sktime: 0.20.0
+2023-06-30 16:47:30,730:INFO:               tbats: 1.1.3
+2023-06-30 16:47:30,730:INFO:            pmdarima: 2.0.3
+2023-06-30 16:47:30,730:INFO:              psutil: 5.9.5
+2023-06-30 16:47:30,730:INFO:          markupsafe: 2.1.3
+2023-06-30 16:47:30,730:INFO:             pickle5: Not installed
+2023-06-30 16:47:30,730:INFO:         cloudpickle: 2.2.1
+2023-06-30 16:47:30,730:INFO:         deprecation: 2.1.0
+2023-06-30 16:47:30,730:INFO:              xxhash: 3.2.0
+2023-06-30 16:47:30,730:INFO:           wurlitzer: 3.0.3
+2023-06-30 16:47:30,730:INFO:PyCaret optional dependencies:
+2023-06-30 16:47:31,040:WARNING:/home/codespace/.python/current/lib/python3.10/site-packages/trio/_core/_multierror.py:406: RuntimeWarning: IPython detected, but you already have a custom exception handler installed. I'll skip installing Trio's custom handler, but this means exception groups will not show full tracebacks.
+  warnings.warn(
+
+2023-06-30 16:47:32,535:INFO:                shap: 0.41.0
+2023-06-30 16:47:32,535:INFO:           interpret: 0.4.2
+2023-06-30 16:47:32,535:INFO:                umap: 0.5.3
+2023-06-30 16:47:32,535:INFO:    pandas_profiling: 4.3.1
+2023-06-30 16:47:32,535:INFO:  explainerdashboard: 0.4.2.2
+2023-06-30 16:47:32,535:INFO:             autoviz: 0.1.720
+2023-06-30 16:47:32,535:INFO:           fairlearn: 0.7.0
+2023-06-30 16:47:32,535:INFO:          deepchecks: 0.17.3
+2023-06-30 16:47:32,535:INFO:             xgboost: 1.7.6
+2023-06-30 16:47:32,535:INFO:            catboost: 1.2
+2023-06-30 16:47:32,535:INFO:              kmodes: 0.12.2
+2023-06-30 16:47:32,535:INFO:             mlxtend: 0.22.0
+2023-06-30 16:47:32,535:INFO:       statsforecast: 1.5.0
+2023-06-30 16:47:32,535:INFO:        tune_sklearn: 0.4.5
+2023-06-30 16:47:32,535:INFO:                 ray: 2.5.1
+2023-06-30 16:47:32,536:INFO:            hyperopt: 0.2.7
+2023-06-30 16:47:32,536:INFO:              optuna: 3.2.0
+2023-06-30 16:47:32,536:INFO:               skopt: 0.9.0
+2023-06-30 16:47:32,536:INFO:              mlflow: 1.30.1
+2023-06-30 16:47:32,536:INFO:              gradio: 3.35.2
+2023-06-30 16:47:32,536:INFO:             fastapi: 0.98.0
+2023-06-30 16:47:32,536:INFO:             uvicorn: 0.22.0
+2023-06-30 16:47:32,536:INFO:              m2cgen: 0.10.0
+2023-06-30 16:47:32,536:INFO:           evidently: 0.2.8
+2023-06-30 16:47:32,536:INFO:               fugue: 0.8.5
+2023-06-30 16:47:32,536:INFO:           streamlit: Not installed
+2023-06-30 16:47:32,536:INFO:             prophet: Not installed
+2023-06-30 16:47:32,536:INFO:None
+2023-06-30 16:47:32,539:INFO:Set Forecast Horizon.
+2023-06-30 16:47:32,540:INFO:Set up Train-Test Splits.
+2023-06-30 16:47:32,566:INFO:Finished creating preprocessing pipeline.
+2023-06-30 16:47:32,575:INFO:Pipeline: ForecastingPipeline(steps=[('forecaster',
+                            TransformedTargetForecaster(steps=[('model',
+                                                                DummyForecaster())]))])
+2023-06-30 16:47:32,575:INFO:Set up Seasonal Period.
+2023-06-30 16:47:32,651:INFO:Setting the seasonal component type - 'add' or 'mul'.
+2023-06-30 16:47:32,651:INFO:Checking if data is strictly positive.
+2023-06-30 16:47:32,778:INFO:Creating final display dataframe.
+2023-06-30 16:47:32,796:INFO:Setup Display Container:                                          Description                    Value
+0                                         session_id                       42
+1                                             Target               Passengers
+2                                           Approach               Univariate
+3                                Exogenous Variables              Not Present
+4                                Original data shape                 (144, 1)
+5                             Transformed data shape                 (144, 1)
+6                        Transformed train set shape                 (142, 1)
+7                         Transformed test set shape                   (2, 1)
+8                           Rows with missing values                     0.0%
+9                                     Fold Generator  ExpandingWindowSplitter
+10                                       Fold Number                        3
+11                       Enforce Prediction Interval                    False
+12                   Splits used for hyperparameters                      all
+13                   User Defined Seasonal Period(s)                     None
+14                           Ignore Seasonality Test                    False
+15                        Seasonality Detection Algo                     auto
+16                            Max Period to Consider                       60
+17                         Seasonal Period(s) Tested     [12, 24, 36, 11, 48]
+18                    Significant Seasonal Period(s)     [12, 24, 36, 11, 48]
+19  Significant Seasonal Period(s) without Harmonics             [48, 36, 11]
+20                                  Remove Harmonics                    False
+21                            Harmonics Order Method             harmonic_max
+22                          Num Seasonalities to Use                        1
+23                          All Seasonalities to Use                     [12]
+24                               Primary Seasonality                       12
+25                               Seasonality Present                     True
+26                                  Seasonality Type                      mul
+27                          Target Strictly Positive                     True
+28                                Target White Noise                       No
+29                                     Recommended d                        1
+30                            Recommended Seasonal D                        1
+31                                        Preprocess                    False
+32                                          CPU Jobs                       -1
+33                                           Use GPU                    False
+34                                    Log Experiment                    False
+35                                   Experiment Name          ts-default-name
+36                                               USI                     b610
+2023-06-30 16:47:32,812:INFO:Engine successfully changes for model 'auto_arima' to 'pmdarima'.
+2023-06-30 16:47:32,844:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 16:47:32,844:INFO:Engine for model 'lr_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:32,845:INFO:Engine for model 'en_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:32,846:INFO:Engine for model 'ridge_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:32,846:INFO:Engine for model 'lasso_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:32,847:INFO:Engine for model 'llar_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:32,848:INFO:Engine for model 'br_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:32,848:INFO:Engine for model 'huber_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:32,851:INFO:Engine for model 'omp_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:32,853:INFO:Engine for model 'knn_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:32,854:INFO:Engine for model 'dt_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:32,855:INFO:Engine for model 'rf_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:32,855:INFO:Engine for model 'et_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:32,856:INFO:Engine for model 'gbr_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:32,859:INFO:Engine for model 'ada_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:32,859:INFO:Engine for model 'xgboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:32,859:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,152:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,153:INFO:Engine for model 'lightgbm_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,526:INFO:Engine for model 'catboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,526:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,562:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,570:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 16:47:33,570:INFO:Engine for model 'lr_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,570:INFO:Engine for model 'en_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,571:INFO:Engine for model 'ridge_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,571:INFO:Engine for model 'lasso_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,571:INFO:Engine for model 'llar_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,572:INFO:Engine for model 'br_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,572:INFO:Engine for model 'huber_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,574:INFO:Engine for model 'omp_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,576:INFO:Engine for model 'knn_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,576:INFO:Engine for model 'dt_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,576:INFO:Engine for model 'rf_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,576:INFO:Engine for model 'et_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,577:INFO:Engine for model 'gbr_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,577:INFO:Engine for model 'ada_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,577:INFO:Engine for model 'xgboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,577:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,577:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,577:INFO:Engine for model 'lightgbm_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,578:INFO:Engine for model 'catboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,578:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,578:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,579:INFO:Engine successfully changes for model 'lr_cds_dt' to 'sklearn'.
+2023-06-30 16:47:33,584:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 16:47:33,584:INFO:Engine for model 'en_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,584:INFO:Engine for model 'ridge_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,585:INFO:Engine for model 'lasso_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,585:INFO:Engine for model 'llar_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,585:INFO:Engine for model 'br_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,585:INFO:Engine for model 'huber_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,587:INFO:Engine for model 'omp_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,588:INFO:Engine for model 'knn_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,589:INFO:Engine for model 'dt_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,589:INFO:Engine for model 'rf_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,589:INFO:Engine for model 'et_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,590:INFO:Engine for model 'gbr_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,590:INFO:Engine for model 'ada_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,590:INFO:Engine for model 'xgboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,590:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,590:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,591:INFO:Engine for model 'lightgbm_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,591:INFO:Engine for model 'catboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,591:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,591:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,596:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 16:47:33,597:INFO:Engine for model 'en_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,597:INFO:Engine for model 'ridge_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,597:INFO:Engine for model 'lasso_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,597:INFO:Engine for model 'llar_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,598:INFO:Engine for model 'br_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,598:INFO:Engine for model 'huber_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,599:INFO:Engine for model 'omp_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,601:INFO:Engine for model 'knn_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,601:INFO:Engine for model 'dt_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,601:INFO:Engine for model 'rf_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,602:INFO:Engine for model 'et_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,602:INFO:Engine for model 'gbr_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,602:INFO:Engine for model 'ada_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,602:INFO:Engine for model 'xgboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,602:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,602:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,603:INFO:Engine for model 'lightgbm_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,603:INFO:Engine for model 'catboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,603:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,603:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,604:INFO:Engine successfully changes for model 'en_cds_dt' to 'sklearn'.
+2023-06-30 16:47:33,609:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 16:47:33,609:INFO:Engine for model 'ridge_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,609:INFO:Engine for model 'lasso_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,610:INFO:Engine for model 'llar_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,610:INFO:Engine for model 'br_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,610:INFO:Engine for model 'huber_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,612:INFO:Engine for model 'omp_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,613:INFO:Engine for model 'knn_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,614:INFO:Engine for model 'dt_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,614:INFO:Engine for model 'rf_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,614:INFO:Engine for model 'et_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,615:INFO:Engine for model 'gbr_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,615:INFO:Engine for model 'ada_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,615:INFO:Engine for model 'xgboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,615:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,615:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,616:INFO:Engine for model 'lightgbm_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,616:INFO:Engine for model 'catboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,616:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,616:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,622:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 16:47:33,622:INFO:Engine for model 'ridge_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,623:INFO:Engine for model 'lasso_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,623:INFO:Engine for model 'llar_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,623:INFO:Engine for model 'br_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,623:INFO:Engine for model 'huber_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,625:INFO:Engine for model 'omp_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,626:INFO:Engine for model 'knn_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,626:INFO:Engine for model 'dt_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,626:INFO:Engine for model 'rf_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,627:INFO:Engine for model 'et_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,627:INFO:Engine for model 'gbr_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,627:INFO:Engine for model 'ada_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,627:INFO:Engine for model 'xgboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,627:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,628:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,628:INFO:Engine for model 'lightgbm_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,628:INFO:Engine for model 'catboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,628:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,628:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,629:INFO:Engine successfully changes for model 'ridge_cds_dt' to 'sklearn'.
+2023-06-30 16:47:33,634:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 16:47:33,635:INFO:Engine for model 'lasso_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,635:INFO:Engine for model 'llar_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,635:INFO:Engine for model 'br_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,635:INFO:Engine for model 'huber_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,637:INFO:Engine for model 'omp_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,638:INFO:Engine for model 'knn_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,638:INFO:Engine for model 'dt_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,639:INFO:Engine for model 'rf_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,639:INFO:Engine for model 'et_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,639:INFO:Engine for model 'gbr_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,639:INFO:Engine for model 'ada_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,640:INFO:Engine for model 'xgboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,640:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,640:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,640:INFO:Engine for model 'lightgbm_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,641:INFO:Engine for model 'catboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,641:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,641:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,647:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 16:47:33,647:INFO:Engine for model 'lasso_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,647:INFO:Engine for model 'llar_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,648:INFO:Engine for model 'br_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,648:INFO:Engine for model 'huber_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,649:INFO:Engine for model 'omp_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,651:INFO:Engine for model 'knn_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,651:INFO:Engine for model 'dt_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,652:INFO:Engine for model 'rf_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,652:INFO:Engine for model 'et_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,652:INFO:Engine for model 'gbr_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,652:INFO:Engine for model 'ada_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,653:INFO:Engine for model 'xgboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,653:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,653:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,653:INFO:Engine for model 'lightgbm_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,654:INFO:Engine for model 'catboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,654:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,654:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,654:INFO:Engine successfully changes for model 'lasso_cds_dt' to 'sklearn'.
+2023-06-30 16:47:33,663:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 16:47:33,664:INFO:Engine for model 'llar_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,664:INFO:Engine for model 'br_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,665:INFO:Engine for model 'huber_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,666:INFO:Engine for model 'omp_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,668:INFO:Engine for model 'knn_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,668:INFO:Engine for model 'dt_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,668:INFO:Engine for model 'rf_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,669:INFO:Engine for model 'et_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,669:INFO:Engine for model 'gbr_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,669:INFO:Engine for model 'ada_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,669:INFO:Engine for model 'xgboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,670:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,670:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,670:INFO:Engine for model 'lightgbm_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,670:INFO:Engine for model 'catboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,671:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,671:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,680:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 16:47:33,681:INFO:Engine for model 'llar_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,681:INFO:Engine for model 'br_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,681:INFO:Engine for model 'huber_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,683:INFO:Engine for model 'omp_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,685:INFO:Engine for model 'knn_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,685:INFO:Engine for model 'dt_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,685:INFO:Engine for model 'rf_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,686:INFO:Engine for model 'et_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,686:INFO:Engine for model 'gbr_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,686:INFO:Engine for model 'ada_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,686:INFO:Engine for model 'xgboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,687:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,687:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,687:INFO:Engine for model 'lightgbm_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,687:INFO:Engine for model 'catboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,687:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,688:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,688:INFO:Engine successfully changes for model 'lar_cds_dt' to 'sklearn'.
+2023-06-30 16:47:33,694:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 16:47:33,695:INFO:Engine for model 'llar_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,695:INFO:Engine for model 'br_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,696:INFO:Engine for model 'huber_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,698:INFO:Engine for model 'omp_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,700:INFO:Engine for model 'knn_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,700:INFO:Engine for model 'dt_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,701:INFO:Engine for model 'rf_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,701:INFO:Engine for model 'et_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,701:INFO:Engine for model 'gbr_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,701:INFO:Engine for model 'ada_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,702:INFO:Engine for model 'xgboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,702:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,702:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,702:INFO:Engine for model 'lightgbm_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,703:INFO:Engine for model 'catboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,703:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,703:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,708:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 16:47:33,709:INFO:Engine for model 'llar_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,709:INFO:Engine for model 'br_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,709:INFO:Engine for model 'huber_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,711:INFO:Engine for model 'omp_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,713:INFO:Engine for model 'knn_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,713:INFO:Engine for model 'dt_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,714:INFO:Engine for model 'rf_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,714:INFO:Engine for model 'et_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,715:INFO:Engine for model 'gbr_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,715:INFO:Engine for model 'ada_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,715:INFO:Engine for model 'xgboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,715:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,716:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,716:INFO:Engine for model 'lightgbm_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,717:INFO:Engine for model 'catboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,717:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,717:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,717:INFO:Engine successfully changes for model 'llar_cds_dt' to 'sklearn'.
+2023-06-30 16:47:33,726:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 16:47:33,727:INFO:Engine for model 'br_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,728:INFO:Engine for model 'huber_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,729:INFO:Engine for model 'omp_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,732:INFO:Engine for model 'knn_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,732:INFO:Engine for model 'dt_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,732:INFO:Engine for model 'rf_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,733:INFO:Engine for model 'et_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,733:INFO:Engine for model 'gbr_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,734:INFO:Engine for model 'ada_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,734:INFO:Engine for model 'xgboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,734:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,734:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,735:INFO:Engine for model 'lightgbm_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,736:INFO:Engine for model 'catboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,736:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,736:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,746:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 16:47:33,747:INFO:Engine for model 'br_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,747:INFO:Engine for model 'huber_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,749:INFO:Engine for model 'omp_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,752:INFO:Engine for model 'knn_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,752:INFO:Engine for model 'dt_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,752:INFO:Engine for model 'rf_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,753:INFO:Engine for model 'et_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,753:INFO:Engine for model 'gbr_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,754:INFO:Engine for model 'ada_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,754:INFO:Engine for model 'xgboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,754:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,754:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,755:INFO:Engine for model 'lightgbm_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,755:INFO:Engine for model 'catboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,756:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,756:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,756:INFO:Engine successfully changes for model 'br_cds_dt' to 'sklearn'.
+2023-06-30 16:47:33,764:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 16:47:33,765:INFO:Engine for model 'huber_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,767:INFO:Engine for model 'omp_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,769:INFO:Engine for model 'knn_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,769:INFO:Engine for model 'dt_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,769:INFO:Engine for model 'rf_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,770:INFO:Engine for model 'et_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,770:INFO:Engine for model 'gbr_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,770:INFO:Engine for model 'ada_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,771:INFO:Engine for model 'xgboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,771:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,771:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,771:INFO:Engine for model 'lightgbm_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,771:INFO:Engine for model 'catboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,771:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,772:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,779:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 16:47:33,781:INFO:Engine for model 'huber_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,783:INFO:Engine for model 'omp_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,785:INFO:Engine for model 'knn_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,786:INFO:Engine for model 'dt_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,786:INFO:Engine for model 'rf_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,786:INFO:Engine for model 'et_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,787:INFO:Engine for model 'gbr_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,787:INFO:Engine for model 'ada_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,788:INFO:Engine for model 'xgboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,788:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,788:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,788:INFO:Engine for model 'lightgbm_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,789:INFO:Engine for model 'catboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,789:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,789:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,790:INFO:Engine successfully changes for model 'huber_cds_dt' to 'sklearn'.
+2023-06-30 16:47:33,798:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 16:47:33,801:INFO:Engine for model 'omp_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,804:INFO:Engine for model 'knn_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,804:INFO:Engine for model 'dt_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,805:INFO:Engine for model 'rf_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,805:INFO:Engine for model 'et_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,805:INFO:Engine for model 'gbr_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,806:INFO:Engine for model 'ada_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,806:INFO:Engine for model 'xgboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,806:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,806:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,807:INFO:Engine for model 'lightgbm_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,807:INFO:Engine for model 'catboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,807:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,807:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,815:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 16:47:33,819:INFO:Engine for model 'omp_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,821:INFO:Engine for model 'knn_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,822:INFO:Engine for model 'dt_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,822:INFO:Engine for model 'rf_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,823:INFO:Engine for model 'et_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,823:INFO:Engine for model 'gbr_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,824:INFO:Engine for model 'ada_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,824:INFO:Engine for model 'xgboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,824:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,824:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,825:INFO:Engine for model 'lightgbm_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,825:INFO:Engine for model 'catboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,826:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,826:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,826:INFO:Engine successfully changes for model 'par_cds_dt' to 'sklearn'.
+2023-06-30 16:47:33,836:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 16:47:33,840:INFO:Engine for model 'omp_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,842:INFO:Engine for model 'knn_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,842:INFO:Engine for model 'dt_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,843:INFO:Engine for model 'rf_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,843:INFO:Engine for model 'et_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,844:INFO:Engine for model 'gbr_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,844:INFO:Engine for model 'ada_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,845:INFO:Engine for model 'xgboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,845:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,845:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,845:INFO:Engine for model 'lightgbm_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,846:INFO:Engine for model 'catboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,846:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,846:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,856:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 16:47:33,860:INFO:Engine for model 'omp_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,862:INFO:Engine for model 'knn_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,863:INFO:Engine for model 'dt_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,864:INFO:Engine for model 'rf_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,864:INFO:Engine for model 'et_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,864:INFO:Engine for model 'gbr_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,865:INFO:Engine for model 'ada_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,865:INFO:Engine for model 'xgboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,865:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,866:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,866:INFO:Engine for model 'lightgbm_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,867:INFO:Engine for model 'catboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,867:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,867:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,867:INFO:Engine successfully changes for model 'omp_cds_dt' to 'sklearn'.
+2023-06-30 16:47:33,877:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 16:47:33,881:INFO:Engine for model 'knn_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,881:INFO:Engine for model 'dt_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,881:INFO:Engine for model 'rf_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,881:INFO:Engine for model 'et_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,882:INFO:Engine for model 'gbr_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,882:INFO:Engine for model 'ada_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,882:INFO:Engine for model 'xgboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,882:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,882:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,883:INFO:Engine for model 'lightgbm_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,883:INFO:Engine for model 'catboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,883:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,883:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,889:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 16:47:33,893:INFO:Engine for model 'knn_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,893:INFO:Engine for model 'dt_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,894:INFO:Engine for model 'rf_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,894:INFO:Engine for model 'et_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,894:INFO:Engine for model 'gbr_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,894:INFO:Engine for model 'ada_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,895:INFO:Engine for model 'xgboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,895:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,895:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,895:INFO:Engine for model 'lightgbm_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,896:INFO:Engine for model 'catboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,896:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,896:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,896:INFO:Engine successfully changes for model 'knn_cds_dt' to 'sklearn'.
+2023-06-30 16:47:33,902:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 16:47:33,905:INFO:Engine for model 'dt_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,906:INFO:Engine for model 'rf_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,906:INFO:Engine for model 'et_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,906:INFO:Engine for model 'gbr_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,906:INFO:Engine for model 'ada_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,907:INFO:Engine for model 'xgboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,907:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,907:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,907:INFO:Engine for model 'lightgbm_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,908:INFO:Engine for model 'catboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,908:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,908:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,913:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 16:47:33,917:INFO:Engine for model 'dt_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,917:INFO:Engine for model 'rf_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,917:INFO:Engine for model 'et_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,918:INFO:Engine for model 'gbr_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,918:INFO:Engine for model 'ada_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,918:INFO:Engine for model 'xgboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,918:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,918:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,919:INFO:Engine for model 'lightgbm_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,919:INFO:Engine for model 'catboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,919:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,919:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,920:INFO:Engine successfully changes for model 'dt_cds_dt' to 'sklearn'.
+2023-06-30 16:47:33,925:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 16:47:33,929:INFO:Engine for model 'rf_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,929:INFO:Engine for model 'et_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,929:INFO:Engine for model 'gbr_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,929:INFO:Engine for model 'ada_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,930:INFO:Engine for model 'xgboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,930:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,930:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,930:INFO:Engine for model 'lightgbm_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,930:INFO:Engine for model 'catboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,931:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,931:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,937:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 16:47:33,941:INFO:Engine for model 'rf_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,941:INFO:Engine for model 'et_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,941:INFO:Engine for model 'gbr_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,942:INFO:Engine for model 'ada_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,942:INFO:Engine for model 'xgboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,942:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,942:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,943:INFO:Engine for model 'lightgbm_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,943:INFO:Engine for model 'catboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,943:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,943:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,944:INFO:Engine successfully changes for model 'rf_cds_dt' to 'sklearn'.
+2023-06-30 16:47:33,950:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 16:47:33,954:INFO:Engine for model 'et_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,954:INFO:Engine for model 'gbr_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,954:INFO:Engine for model 'ada_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,954:INFO:Engine for model 'xgboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,954:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,955:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,955:INFO:Engine for model 'lightgbm_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,955:INFO:Engine for model 'catboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,955:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,955:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,961:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 16:47:33,965:INFO:Engine for model 'et_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,965:INFO:Engine for model 'gbr_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,965:INFO:Engine for model 'ada_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,966:INFO:Engine for model 'xgboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,966:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,966:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,966:INFO:Engine for model 'lightgbm_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,967:INFO:Engine for model 'catboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,967:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,967:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,967:INFO:Engine successfully changes for model 'et_cds_dt' to 'sklearn'.
+2023-06-30 16:47:33,972:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 16:47:33,977:INFO:Engine for model 'gbr_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,977:INFO:Engine for model 'ada_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,977:INFO:Engine for model 'xgboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,978:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,978:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,978:INFO:Engine for model 'lightgbm_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,978:INFO:Engine for model 'catboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,978:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,978:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,985:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 16:47:33,989:INFO:Engine for model 'gbr_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,989:INFO:Engine for model 'ada_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,989:INFO:Engine for model 'xgboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,990:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,990:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:33,990:INFO:Engine for model 'lightgbm_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,990:INFO:Engine for model 'catboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:33,990:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,990:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:33,991:INFO:Engine successfully changes for model 'gbr_cds_dt' to 'sklearn'.
+2023-06-30 16:47:33,997:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 16:47:34,001:INFO:Engine for model 'ada_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:34,001:INFO:Engine for model 'xgboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:34,001:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:34,001:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:34,002:INFO:Engine for model 'lightgbm_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:34,002:INFO:Engine for model 'catboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:34,002:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:34,002:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:34,008:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 16:47:34,012:INFO:Engine for model 'ada_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:34,013:INFO:Engine for model 'xgboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:34,013:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:34,013:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:34,013:INFO:Engine for model 'lightgbm_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:34,013:INFO:Engine for model 'catboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:34,013:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:34,014:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:34,014:INFO:Engine successfully changes for model 'ada_cds_dt' to 'sklearn'.
+2023-06-30 16:47:34,019:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 16:47:34,024:INFO:Engine for model 'xgboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:34,024:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:34,024:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:34,024:INFO:Engine for model 'lightgbm_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:34,025:INFO:Engine for model 'catboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:34,025:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:34,025:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:34,031:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 16:47:34,036:INFO:Engine for model 'xgboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:34,036:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:34,036:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:34,036:INFO:Engine for model 'lightgbm_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:34,037:INFO:Engine for model 'catboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:34,037:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:34,037:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:34,037:INFO:Engine successfully changes for model 'xgboost_cds_dt' to 'sklearn'.
+2023-06-30 16:47:34,043:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 16:47:34,048:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:34,048:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:34,048:INFO:Engine for model 'lightgbm_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:34,049:INFO:Engine for model 'catboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:34,049:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:34,049:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:34,054:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 16:47:34,059:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:34,059:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:34,060:INFO:Engine for model 'lightgbm_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:34,060:INFO:Engine for model 'catboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:34,060:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:34,060:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:34,061:INFO:Engine successfully changes for model 'lightgbm_cds_dt' to 'sklearn'.
+2023-06-30 16:47:34,066:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 16:47:34,071:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:34,071:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:34,072:INFO:Engine for model 'catboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:34,072:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:34,072:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:34,078:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 16:47:34,083:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:34,083:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:34,083:INFO:Engine for model 'catboost_cds_dt' has not been set explicitly, hence returning None.
+2023-06-30 16:47:34,083:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:34,083:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:34,084:INFO:Engine successfully changes for model 'catboost_cds_dt' to 'sklearn'.
+2023-06-30 16:47:34,089:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 16:47:34,093:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:34,094:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:34,094:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:34,094:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:34,100:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 16:47:34,104:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:34,104:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:34,105:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:34,105:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:34,111:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 16:47:34,116:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:34,116:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:34,116:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:34,117:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:34,122:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 16:47:34,127:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:34,127:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-06-30 16:47:34,128:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:34,128:INFO:Soft dependency imported: catboost: 1.2
+2023-06-30 16:47:34,129:INFO:setup() successfully completed in 3.41s...............
+2023-06-30 16:59:32,316:WARNING:/home/codespace/.python/current/lib/python3.10/site-packages/pycaret/internal/tests/time_series.py:396: InterpolationWarning: The test statistic is outside of the range of p-values available in the
+look-up table. The actual p-value is greater than the p-value returned.
+
+  results_ = kpss(data_, regression="ct", nlags="auto")
+
+2023-06-30 17:07:17,779:INFO:Initializing compare_models()
+2023-06-30 17:07:17,779:INFO:compare_models(self=<pycaret.time_series.forecasting.oop.TSForecastingExperiment object at 0x7f6fcf33bf70>, include=None, fold=None, round=4, cross_validation=True, sort=mape, n_select=1, budget_time=None, turbo=True, errors=ignore, fit_kwargs=None, groups=None, experiment_custom_tags=None, probability_threshold=None, verbose=True, parallel=None, caller_params={'self': <pycaret.time_series.forecasting.oop.TSForecastingExperiment object at 0x7f6fcf33bf70>, 'include': None, 'exclude': None, 'fold': None, 'round': 4, 'cross_validation': True, 'sort': 'mape', 'n_select': 1, 'budget_time': None, 'turbo': True, 'errors': 'ignore', 'fit_kwargs': None, 'experiment_custom_tags': None, 'engine': None, 'verbose': True, 'parallel': None, '__class__': <class 'pycaret.time_series.forecasting.oop.TSForecastingExperiment'>}, exclude=None)
+2023-06-30 17:07:17,779:INFO:Checking exceptions
+2023-06-30 17:07:17,782:INFO:Preparing display monitor
+2023-06-30 17:07:17,813:WARNING:/home/codespace/.python/current/lib/python3.10/site-packages/pycaret/internal/pycaret_experiment/supervised_experiment.py:709: UserWarning: Unsupported estimator `ensemble_forecaster` for method `compare_models()`, removing from model_library
+  warnings.warn(
+
+2023-06-30 17:07:17,813:INFO:Initializing Naive Forecaster
+2023-06-30 17:07:17,813:INFO:Total runtime is 2.1298726399739584e-06 minutes
+2023-06-30 17:07:17,816:INFO:SubProcess create_model() called ==================================
+2023-06-30 17:07:17,817:INFO:Initializing create_model()
+2023-06-30 17:07:17,817:INFO:create_model(self=<pycaret.time_series.forecasting.oop.TSForecastingExperiment object at 0x7f6fcf33bf70>, estimator=naive, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x7f6feb014340>, model_only=True, return_train_score=False, kwargs={})
+2023-06-30 17:07:17,817:INFO:Checking exceptions
+2023-06-30 17:07:17,817:INFO:Importing libraries
+2023-06-30 17:07:17,817:INFO:Copying training dataset
+2023-06-30 17:07:17,821:INFO:Defining folds
+2023-06-30 17:07:17,821:INFO:Declaring metric variables
+2023-06-30 17:07:17,824:INFO:Importing untrained model
+2023-06-30 17:07:17,828:INFO:Naive Forecaster Imported successfully
+2023-06-30 17:07:17,836:INFO:Starting cross validation
+2023-06-30 17:07:17,837:INFO:Cross validating with ExpandingWindowSplitter(fh=ForecastingHorizon([1, 2], dtype='int64', is_relative=True),
+                        initial_window=136, step_length=2), n_jobs=-1
+2023-06-30 17:07:22,964:INFO:Calculating mean and std
+2023-06-30 17:07:22,968:INFO:Creating metrics dataframe
+2023-06-30 17:07:22,980:INFO:Uploading results into container
+2023-06-30 17:07:22,980:INFO:Uploading model into container now
+2023-06-30 17:07:22,981:INFO:_master_model_container: 1
+2023-06-30 17:07:22,981:INFO:_display_container: 2
+2023-06-30 17:07:22,981:INFO:NaiveForecaster()
+2023-06-30 17:07:22,981:INFO:create_model() successfully completed......................................
+2023-06-30 17:07:23,191:INFO:SubProcess create_model() end ==================================
+2023-06-30 17:07:23,191:INFO:Creating metrics dataframe
+2023-06-30 17:07:23,202:INFO:Initializing Grand Means Forecaster
+2023-06-30 17:07:23,203:INFO:Total runtime is 0.08982166846593222 minutes
+2023-06-30 17:07:23,206:INFO:SubProcess create_model() called ==================================
+2023-06-30 17:07:23,207:INFO:Initializing create_model()
+2023-06-30 17:07:23,207:INFO:create_model(self=<pycaret.time_series.forecasting.oop.TSForecastingExperiment object at 0x7f6fcf33bf70>, estimator=grand_means, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x7f6feb014340>, model_only=True, return_train_score=False, kwargs={})
+2023-06-30 17:07:23,207:INFO:Checking exceptions
+2023-06-30 17:07:23,207:INFO:Importing libraries
+2023-06-30 17:07:23,207:INFO:Copying training dataset
+2023-06-30 17:07:23,212:INFO:Defining folds
+2023-06-30 17:07:23,212:INFO:Declaring metric variables
+2023-06-30 17:07:23,216:INFO:Importing untrained model
+2023-06-30 17:07:23,220:INFO:Grand Means Forecaster Imported successfully
+2023-06-30 17:07:23,228:INFO:Starting cross validation
+2023-06-30 17:07:23,229:INFO:Cross validating with ExpandingWindowSplitter(fh=ForecastingHorizon([1, 2], dtype='int64', is_relative=True),
+                        initial_window=136, step_length=2), n_jobs=-1
+2023-06-30 17:07:25,569:INFO:Calculating mean and std
+2023-06-30 17:07:25,570:INFO:Creating metrics dataframe
+2023-06-30 17:07:25,576:INFO:Uploading results into container
+2023-06-30 17:07:25,576:INFO:Uploading model into container now
+2023-06-30 17:07:25,576:INFO:_master_model_container: 2
+2023-06-30 17:07:25,576:INFO:_display_container: 2
+2023-06-30 17:07:25,578:INFO:NaiveForecaster(strategy='mean')
+2023-06-30 17:07:25,579:INFO:create_model() successfully completed......................................
+2023-06-30 17:07:25,811:INFO:SubProcess create_model() end ==================================
+2023-06-30 17:07:25,812:INFO:Creating metrics dataframe
+2023-06-30 17:07:25,823:INFO:Initializing Seasonal Naive Forecaster
+2023-06-30 17:07:25,823:INFO:Total runtime is 0.13350223302841188 minutes
+2023-06-30 17:07:25,827:INFO:SubProcess create_model() called ==================================
+2023-06-30 17:07:25,827:INFO:Initializing create_model()
+2023-06-30 17:07:25,827:INFO:create_model(self=<pycaret.time_series.forecasting.oop.TSForecastingExperiment object at 0x7f6fcf33bf70>, estimator=snaive, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x7f6feb014340>, model_only=True, return_train_score=False, kwargs={})
+2023-06-30 17:07:25,827:INFO:Checking exceptions
+2023-06-30 17:07:25,827:INFO:Importing libraries
+2023-06-30 17:07:25,828:INFO:Copying training dataset
+2023-06-30 17:07:25,832:INFO:Defining folds
+2023-06-30 17:07:25,832:INFO:Declaring metric variables
+2023-06-30 17:07:25,836:INFO:Importing untrained model
+2023-06-30 17:07:25,839:INFO:Seasonal Naive Forecaster Imported successfully
+2023-06-30 17:07:25,846:INFO:Starting cross validation
+2023-06-30 17:07:25,848:INFO:Cross validating with ExpandingWindowSplitter(fh=ForecastingHorizon([1, 2], dtype='int64', is_relative=True),
+                        initial_window=136, step_length=2), n_jobs=-1
+2023-06-30 17:07:26,012:INFO:Calculating mean and std
+2023-06-30 17:07:26,013:INFO:Creating metrics dataframe
+2023-06-30 17:07:26,018:INFO:Uploading results into container
+2023-06-30 17:07:26,018:INFO:Uploading model into container now
+2023-06-30 17:07:26,019:INFO:_master_model_container: 3
+2023-06-30 17:07:26,019:INFO:_display_container: 2
+2023-06-30 17:07:26,019:INFO:NaiveForecaster(sp=12)
+2023-06-30 17:07:26,019:INFO:create_model() successfully completed......................................
+2023-06-30 17:07:26,167:INFO:SubProcess create_model() end ==================================
+2023-06-30 17:07:26,168:INFO:Creating metrics dataframe
+2023-06-30 17:07:26,180:INFO:Initializing Polynomial Trend Forecaster
+2023-06-30 17:07:26,180:INFO:Total runtime is 0.1394421696662903 minutes
+2023-06-30 17:07:26,183:INFO:SubProcess create_model() called ==================================
+2023-06-30 17:07:26,184:INFO:Initializing create_model()
+2023-06-30 17:07:26,184:INFO:create_model(self=<pycaret.time_series.forecasting.oop.TSForecastingExperiment object at 0x7f6fcf33bf70>, estimator=polytrend, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x7f6feb014340>, model_only=True, return_train_score=False, kwargs={})
+2023-06-30 17:07:26,184:INFO:Checking exceptions
+2023-06-30 17:07:26,184:INFO:Importing libraries
+2023-06-30 17:07:26,184:INFO:Copying training dataset
+2023-06-30 17:07:26,188:INFO:Defining folds
+2023-06-30 17:07:26,188:INFO:Declaring metric variables
+2023-06-30 17:07:26,192:INFO:Importing untrained model
+2023-06-30 17:07:26,196:INFO:Polynomial Trend Forecaster Imported successfully
+2023-06-30 17:07:26,205:INFO:Starting cross validation
+2023-06-30 17:07:26,206:INFO:Cross validating with ExpandingWindowSplitter(fh=ForecastingHorizon([1, 2], dtype='int64', is_relative=True),
+                        initial_window=136, step_length=2), n_jobs=-1
+2023-06-30 17:07:26,372:INFO:Calculating mean and std
+2023-06-30 17:07:26,374:INFO:Creating metrics dataframe
+2023-06-30 17:07:26,379:INFO:Uploading results into container
+2023-06-30 17:07:26,379:INFO:Uploading model into container now
+2023-06-30 17:07:26,379:INFO:_master_model_container: 4
+2023-06-30 17:07:26,379:INFO:_display_container: 2
+2023-06-30 17:07:26,380:INFO:PolynomialTrendForecaster()
+2023-06-30 17:07:26,380:INFO:create_model() successfully completed......................................
+2023-06-30 17:07:26,540:INFO:SubProcess create_model() end ==================================
+2023-06-30 17:07:26,540:INFO:Creating metrics dataframe
+2023-06-30 17:07:26,557:INFO:Initializing ARIMA
+2023-06-30 17:07:26,557:INFO:Total runtime is 0.14572267134984337 minutes
+2023-06-30 17:07:26,562:INFO:SubProcess create_model() called ==================================
+2023-06-30 17:07:26,562:INFO:Initializing create_model()
+2023-06-30 17:07:26,562:INFO:create_model(self=<pycaret.time_series.forecasting.oop.TSForecastingExperiment object at 0x7f6fcf33bf70>, estimator=arima, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x7f6feb014340>, model_only=True, return_train_score=False, kwargs={})
+2023-06-30 17:07:26,562:INFO:Checking exceptions
+2023-06-30 17:07:26,562:INFO:Importing libraries
+2023-06-30 17:07:26,562:INFO:Copying training dataset
+2023-06-30 17:07:26,568:INFO:Defining folds
+2023-06-30 17:07:26,568:INFO:Declaring metric variables
+2023-06-30 17:07:26,573:INFO:Importing untrained model
+2023-06-30 17:07:26,579:INFO:ARIMA Imported successfully
+2023-06-30 17:07:26,593:INFO:Starting cross validation
+2023-06-30 17:07:26,594:INFO:Cross validating with ExpandingWindowSplitter(fh=ForecastingHorizon([1, 2], dtype='int64', is_relative=True),
+                        initial_window=136, step_length=2), n_jobs=-1
+2023-06-30 17:07:27,120:INFO:Calculating mean and std
+2023-06-30 17:07:27,121:INFO:Creating metrics dataframe
+2023-06-30 17:07:27,125:INFO:Uploading results into container
+2023-06-30 17:07:27,126:INFO:Uploading model into container now
+2023-06-30 17:07:27,126:INFO:_master_model_container: 5
+2023-06-30 17:07:27,126:INFO:_display_container: 2
+2023-06-30 17:07:27,127:INFO:ARIMA(seasonal_order=(0, 1, 0, 12))
+2023-06-30 17:07:27,127:INFO:create_model() successfully completed......................................
+2023-06-30 17:07:27,284:INFO:SubProcess create_model() end ==================================
+2023-06-30 17:07:27,284:INFO:Creating metrics dataframe
+2023-06-30 17:07:27,299:INFO:Initializing Auto ARIMA
+2023-06-30 17:07:27,299:INFO:Total runtime is 0.15809006293614708 minutes
+2023-06-30 17:07:27,304:INFO:SubProcess create_model() called ==================================
+2023-06-30 17:07:27,304:INFO:Initializing create_model()
+2023-06-30 17:07:27,304:INFO:create_model(self=<pycaret.time_series.forecasting.oop.TSForecastingExperiment object at 0x7f6fcf33bf70>, estimator=auto_arima, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x7f6feb014340>, model_only=True, return_train_score=False, kwargs={})
+2023-06-30 17:07:27,304:INFO:Checking exceptions
+2023-06-30 17:07:27,304:INFO:Importing libraries
+2023-06-30 17:07:27,304:INFO:Copying training dataset
+2023-06-30 17:07:27,309:INFO:Defining folds
+2023-06-30 17:07:27,309:INFO:Declaring metric variables
+2023-06-30 17:07:27,313:INFO:Importing untrained model
+2023-06-30 17:07:27,319:INFO:Auto ARIMA Imported successfully
+2023-06-30 17:07:27,326:INFO:Starting cross validation
+2023-06-30 17:07:27,327:INFO:Cross validating with ExpandingWindowSplitter(fh=ForecastingHorizon([1, 2], dtype='int64', is_relative=True),
+                        initial_window=136, step_length=2), n_jobs=-1
+2023-06-30 17:07:46,426:INFO:Calculating mean and std
+2023-06-30 17:07:46,428:INFO:Creating metrics dataframe
+2023-06-30 17:07:46,433:INFO:Uploading results into container
+2023-06-30 17:07:46,433:INFO:Uploading model into container now
+2023-06-30 17:07:46,434:INFO:_master_model_container: 6
+2023-06-30 17:07:46,434:INFO:_display_container: 2
+2023-06-30 17:07:46,434:INFO:AutoARIMA(random_state=42, sp=12, suppress_warnings=True)
+2023-06-30 17:07:46,435:INFO:create_model() successfully completed......................................
+2023-06-30 17:07:46,658:INFO:SubProcess create_model() end ==================================
+2023-06-30 17:07:46,659:INFO:Creating metrics dataframe
+2023-06-30 17:07:46,672:INFO:Initializing Exponential Smoothing
+2023-06-30 17:07:46,672:INFO:Total runtime is 0.480975612004598 minutes
+2023-06-30 17:07:46,677:INFO:SubProcess create_model() called ==================================
+2023-06-30 17:07:46,677:INFO:Initializing create_model()
+2023-06-30 17:07:46,677:INFO:create_model(self=<pycaret.time_series.forecasting.oop.TSForecastingExperiment object at 0x7f6fcf33bf70>, estimator=exp_smooth, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x7f6feb014340>, model_only=True, return_train_score=False, kwargs={})
+2023-06-30 17:07:46,677:INFO:Checking exceptions
+2023-06-30 17:07:46,678:INFO:Importing libraries
+2023-06-30 17:07:46,678:INFO:Copying training dataset
+2023-06-30 17:07:46,682:INFO:Defining folds
+2023-06-30 17:07:46,682:INFO:Declaring metric variables
+2023-06-30 17:07:46,686:INFO:Importing untrained model
+2023-06-30 17:07:46,692:INFO:Exponential Smoothing Imported successfully
+2023-06-30 17:07:46,700:INFO:Starting cross validation
+2023-06-30 17:07:46,701:INFO:Cross validating with ExpandingWindowSplitter(fh=ForecastingHorizon([1, 2], dtype='int64', is_relative=True),
+                        initial_window=136, step_length=2), n_jobs=-1
+2023-06-30 17:07:47,574:INFO:Calculating mean and std
+2023-06-30 17:07:47,576:INFO:Creating metrics dataframe
+2023-06-30 17:07:47,582:INFO:Uploading results into container
+2023-06-30 17:07:47,582:INFO:Uploading model into container now
+2023-06-30 17:07:47,583:INFO:_master_model_container: 7
+2023-06-30 17:07:47,584:INFO:_display_container: 2
+2023-06-30 17:07:47,584:INFO:ExponentialSmoothing(seasonal='mul', sp=12, trend='add')
+2023-06-30 17:07:47,584:INFO:create_model() successfully completed......................................
+2023-06-30 17:07:47,768:INFO:SubProcess create_model() end ==================================
+2023-06-30 17:07:47,768:INFO:Creating metrics dataframe
+2023-06-30 17:07:47,782:INFO:Initializing ETS
+2023-06-30 17:07:47,782:INFO:Total runtime is 0.4994749148686727 minutes
+2023-06-30 17:07:47,786:INFO:SubProcess create_model() called ==================================
+2023-06-30 17:07:47,786:INFO:Initializing create_model()
+2023-06-30 17:07:47,786:INFO:create_model(self=<pycaret.time_series.forecasting.oop.TSForecastingExperiment object at 0x7f6fcf33bf70>, estimator=ets, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x7f6feb014340>, model_only=True, return_train_score=False, kwargs={})
+2023-06-30 17:07:47,786:INFO:Checking exceptions
+2023-06-30 17:07:47,786:INFO:Importing libraries
+2023-06-30 17:07:47,786:INFO:Copying training dataset
+2023-06-30 17:07:47,791:INFO:Defining folds
+2023-06-30 17:07:47,791:INFO:Declaring metric variables
+2023-06-30 17:07:47,795:INFO:Importing untrained model
+2023-06-30 17:07:47,800:INFO:ETS Imported successfully
+2023-06-30 17:07:47,807:INFO:Starting cross validation
+2023-06-30 17:07:47,808:INFO:Cross validating with ExpandingWindowSplitter(fh=ForecastingHorizon([1, 2], dtype='int64', is_relative=True),
+                        initial_window=136, step_length=2), n_jobs=-1
+2023-06-30 17:07:50,474:INFO:Calculating mean and std
+2023-06-30 17:07:50,476:INFO:Creating metrics dataframe
+2023-06-30 17:07:50,482:INFO:Uploading results into container
+2023-06-30 17:07:50,483:INFO:Uploading model into container now
+2023-06-30 17:07:50,484:INFO:_master_model_container: 8
+2023-06-30 17:07:50,484:INFO:_display_container: 2
+2023-06-30 17:07:50,484:INFO:AutoETS(seasonal='mul', sp=12, trend='add')
+2023-06-30 17:07:50,484:INFO:create_model() successfully completed......................................
+2023-06-30 17:07:50,735:INFO:SubProcess create_model() end ==================================
+2023-06-30 17:07:50,735:INFO:Creating metrics dataframe
+2023-06-30 17:07:50,749:INFO:Initializing Theta Forecaster
+2023-06-30 17:07:50,749:INFO:Total runtime is 0.5489290555318197 minutes
+2023-06-30 17:07:50,753:INFO:SubProcess create_model() called ==================================
+2023-06-30 17:07:50,753:INFO:Initializing create_model()
+2023-06-30 17:07:50,753:INFO:create_model(self=<pycaret.time_series.forecasting.oop.TSForecastingExperiment object at 0x7f6fcf33bf70>, estimator=theta, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x7f6feb014340>, model_only=True, return_train_score=False, kwargs={})
+2023-06-30 17:07:50,753:INFO:Checking exceptions
+2023-06-30 17:07:50,754:INFO:Importing libraries
+2023-06-30 17:07:50,754:INFO:Copying training dataset
+2023-06-30 17:07:50,758:INFO:Defining folds
+2023-06-30 17:07:50,758:INFO:Declaring metric variables
+2023-06-30 17:07:50,762:INFO:Importing untrained model
+2023-06-30 17:07:50,767:INFO:Theta Forecaster Imported successfully
+2023-06-30 17:07:50,774:INFO:Starting cross validation
+2023-06-30 17:07:50,775:INFO:Cross validating with ExpandingWindowSplitter(fh=ForecastingHorizon([1, 2], dtype='int64', is_relative=True),
+                        initial_window=136, step_length=2), n_jobs=-1
+2023-06-30 17:07:50,869:INFO:Calculating mean and std
+2023-06-30 17:07:50,870:INFO:Creating metrics dataframe
+2023-06-30 17:07:50,875:INFO:Uploading results into container
+2023-06-30 17:07:50,876:INFO:Uploading model into container now
+2023-06-30 17:07:50,876:INFO:_master_model_container: 9
+2023-06-30 17:07:50,877:INFO:_display_container: 2
+2023-06-30 17:07:50,877:INFO:ThetaForecaster(sp=12)
+2023-06-30 17:07:50,877:INFO:create_model() successfully completed......................................
+2023-06-30 17:07:51,034:INFO:SubProcess create_model() end ==================================
+2023-06-30 17:07:51,034:INFO:Creating metrics dataframe
+2023-06-30 17:07:51,049:INFO:Initializing STLF
+2023-06-30 17:07:51,049:INFO:Total runtime is 0.553924576441447 minutes
+2023-06-30 17:07:51,052:INFO:SubProcess create_model() called ==================================
+2023-06-30 17:07:51,053:INFO:Initializing create_model()
+2023-06-30 17:07:51,053:INFO:create_model(self=<pycaret.time_series.forecasting.oop.TSForecastingExperiment object at 0x7f6fcf33bf70>, estimator=stlf, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x7f6feb014340>, model_only=True, return_train_score=False, kwargs={})
+2023-06-30 17:07:51,053:INFO:Checking exceptions
+2023-06-30 17:07:51,053:INFO:Importing libraries
+2023-06-30 17:07:51,053:INFO:Copying training dataset
+2023-06-30 17:07:51,058:INFO:Defining folds
+2023-06-30 17:07:51,058:INFO:Declaring metric variables
+2023-06-30 17:07:51,062:INFO:Importing untrained model
+2023-06-30 17:07:51,066:INFO:STLF Imported successfully
+2023-06-30 17:07:51,073:INFO:Starting cross validation
+2023-06-30 17:07:51,075:INFO:Cross validating with ExpandingWindowSplitter(fh=ForecastingHorizon([1, 2], dtype='int64', is_relative=True),
+                        initial_window=136, step_length=2), n_jobs=-1
+2023-06-30 17:07:51,268:INFO:Calculating mean and std
+2023-06-30 17:07:51,282:INFO:Creating metrics dataframe
+2023-06-30 17:07:51,296:INFO:Uploading results into container
+2023-06-30 17:07:51,296:INFO:Uploading model into container now
+2023-06-30 17:07:51,296:INFO:_master_model_container: 10
+2023-06-30 17:07:51,296:INFO:_display_container: 2
+2023-06-30 17:07:51,297:INFO:STLForecaster(sp=12)
+2023-06-30 17:07:51,297:INFO:create_model() successfully completed......................................
+2023-06-30 17:07:51,446:INFO:SubProcess create_model() end ==================================
+2023-06-30 17:07:51,447:INFO:Creating metrics dataframe
+2023-06-30 17:07:51,460:INFO:Initializing Croston
+2023-06-30 17:07:51,461:INFO:Total runtime is 0.5607871452967327 minutes
+2023-06-30 17:07:51,464:INFO:SubProcess create_model() called ==================================
+2023-06-30 17:07:51,465:INFO:Initializing create_model()
+2023-06-30 17:07:51,465:INFO:create_model(self=<pycaret.time_series.forecasting.oop.TSForecastingExperiment object at 0x7f6fcf33bf70>, estimator=croston, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x7f6feb014340>, model_only=True, return_train_score=False, kwargs={})
+2023-06-30 17:07:51,465:INFO:Checking exceptions
+2023-06-30 17:07:51,465:INFO:Importing libraries
+2023-06-30 17:07:51,465:INFO:Copying training dataset
+2023-06-30 17:07:51,469:INFO:Defining folds
+2023-06-30 17:07:51,469:INFO:Declaring metric variables
+2023-06-30 17:07:51,473:INFO:Importing untrained model
+2023-06-30 17:07:51,477:INFO:Croston Imported successfully
+2023-06-30 17:07:51,485:INFO:Starting cross validation
+2023-06-30 17:07:51,486:INFO:Cross validating with ExpandingWindowSplitter(fh=ForecastingHorizon([1, 2], dtype='int64', is_relative=True),
+                        initial_window=136, step_length=2), n_jobs=-1
+2023-06-30 17:07:51,534:INFO:Calculating mean and std
+2023-06-30 17:07:51,534:INFO:Creating metrics dataframe
+2023-06-30 17:07:51,539:INFO:Uploading results into container
+2023-06-30 17:07:51,539:INFO:Uploading model into container now
+2023-06-30 17:07:51,539:INFO:_master_model_container: 11
+2023-06-30 17:07:51,539:INFO:_display_container: 2
+2023-06-30 17:07:51,539:INFO:Croston()
+2023-06-30 17:07:51,539:INFO:create_model() successfully completed......................................
+2023-06-30 17:07:51,687:INFO:SubProcess create_model() end ==================================
+2023-06-30 17:07:51,687:INFO:Creating metrics dataframe
+2023-06-30 17:07:51,701:INFO:Initializing Linear w/ Cond. Deseasonalize & Detrending
+2023-06-30 17:07:51,701:INFO:Total runtime is 0.5647942384084067 minutes
+2023-06-30 17:07:51,705:INFO:SubProcess create_model() called ==================================
+2023-06-30 17:07:51,705:INFO:Initializing create_model()
+2023-06-30 17:07:51,705:INFO:create_model(self=<pycaret.time_series.forecasting.oop.TSForecastingExperiment object at 0x7f6fcf33bf70>, estimator=lr_cds_dt, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x7f6feb014340>, model_only=True, return_train_score=False, kwargs={})
+2023-06-30 17:07:51,705:INFO:Checking exceptions
+2023-06-30 17:07:51,706:INFO:Importing libraries
+2023-06-30 17:07:51,706:INFO:Copying training dataset
+2023-06-30 17:07:51,710:INFO:Defining folds
+2023-06-30 17:07:51,710:INFO:Declaring metric variables
+2023-06-30 17:07:51,714:INFO:Importing untrained model
+2023-06-30 17:07:51,718:INFO:Linear w/ Cond. Deseasonalize & Detrending Imported successfully
+2023-06-30 17:07:51,725:INFO:Starting cross validation
+2023-06-30 17:07:51,726:INFO:Cross validating with ExpandingWindowSplitter(fh=ForecastingHorizon([1, 2], dtype='int64', is_relative=True),
+                        initial_window=136, step_length=2), n_jobs=-1
+2023-06-30 17:07:52,101:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-06-30 17:07:52,101:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-06-30 17:07:52,101:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-06-30 17:07:52,102:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-06-30 17:07:52,110:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-06-30 17:07:52,110:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-06-30 17:07:52,110:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-06-30 17:07:52,110:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-06-30 17:07:52,112:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-06-30 17:07:52,112:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-06-30 17:07:52,112:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-06-30 17:07:52,113:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-06-30 17:07:52,144:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 17:07:52,151:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 17:07:52,153:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 17:07:52,346:INFO:Calculating mean and std
+2023-06-30 17:07:52,348:INFO:Creating metrics dataframe
+2023-06-30 17:07:52,352:INFO:Uploading results into container
+2023-06-30 17:07:52,352:INFO:Uploading model into container now
+2023-06-30 17:07:52,353:INFO:_master_model_container: 12
+2023-06-30 17:07:52,353:INFO:_display_container: 2
+2023-06-30 17:07:52,357:INFO:BaseCdsDtForecaster(fe_target_rr=[WindowSummarizer(lag_feature={'lag': [12, 11,
+                                                                        10, 9,
+                                                                        8, 7, 6,
+                                                                        5, 4, 3,
+                                                                        2, 1]},
+                                                   n_jobs=1)],
+                    regressor=LinearRegression(n_jobs=-1), sp=12,
+                    window_length=12)
+2023-06-30 17:07:52,357:INFO:create_model() successfully completed......................................
+2023-06-30 17:07:52,627:INFO:SubProcess create_model() end ==================================
+2023-06-30 17:07:52,627:INFO:Creating metrics dataframe
+2023-06-30 17:07:52,641:INFO:Initializing Elastic Net w/ Cond. Deseasonalize & Detrending
+2023-06-30 17:07:52,642:INFO:Total runtime is 0.5804736455281577 minutes
+2023-06-30 17:07:52,646:INFO:SubProcess create_model() called ==================================
+2023-06-30 17:07:52,646:INFO:Initializing create_model()
+2023-06-30 17:07:52,646:INFO:create_model(self=<pycaret.time_series.forecasting.oop.TSForecastingExperiment object at 0x7f6fcf33bf70>, estimator=en_cds_dt, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x7f6feb014340>, model_only=True, return_train_score=False, kwargs={})
+2023-06-30 17:07:52,646:INFO:Checking exceptions
+2023-06-30 17:07:52,646:INFO:Importing libraries
+2023-06-30 17:07:52,646:INFO:Copying training dataset
+2023-06-30 17:07:52,652:INFO:Defining folds
+2023-06-30 17:07:52,652:INFO:Declaring metric variables
+2023-06-30 17:07:52,656:INFO:Importing untrained model
+2023-06-30 17:07:52,660:INFO:Elastic Net w/ Cond. Deseasonalize & Detrending Imported successfully
+2023-06-30 17:07:52,667:INFO:Starting cross validation
+2023-06-30 17:07:52,668:INFO:Cross validating with ExpandingWindowSplitter(fh=ForecastingHorizon([1, 2], dtype='int64', is_relative=True),
+                        initial_window=136, step_length=2), n_jobs=-1
+2023-06-30 17:07:52,919:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-06-30 17:07:52,919:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-06-30 17:07:52,919:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-06-30 17:07:52,919:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-06-30 17:07:52,945:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-06-30 17:07:53,161:INFO:Calculating mean and std
+2023-06-30 17:07:53,162:INFO:Creating metrics dataframe
+2023-06-30 17:07:53,168:INFO:Uploading results into container
+2023-06-30 17:07:53,168:INFO:Uploading model into container now
+2023-06-30 17:07:53,168:INFO:_master_model_container: 13
+2023-06-30 17:07:53,169:INFO:_display_container: 2
+2023-06-30 17:07:53,171:INFO:BaseCdsDtForecaster(fe_target_rr=[WindowSummarizer(lag_feature={'lag': [12, 11,
+                                                                        10, 9,
+                                                                        8, 7, 6,
+                                                                        5, 4, 3,
+                                                                        2, 1]},
+                                                   n_jobs=1)],
+                    regressor=ElasticNet(random_state=42), sp=12,
+                    window_length=12)
+2023-06-30 17:07:53,171:INFO:create_model() successfully completed......................................
+2023-06-30 17:07:53,328:INFO:SubProcess create_model() end ==================================
+2023-06-30 17:07:53,328:INFO:Creating metrics dataframe
+2023-06-30 17:07:53,343:INFO:Initializing Ridge w/ Cond. Deseasonalize & Detrending
+2023-06-30 17:07:53,343:INFO:Total runtime is 0.5921635826428733 minutes
+2023-06-30 17:07:53,348:INFO:SubProcess create_model() called ==================================
+2023-06-30 17:07:53,348:INFO:Initializing create_model()
+2023-06-30 17:07:53,348:INFO:create_model(self=<pycaret.time_series.forecasting.oop.TSForecastingExperiment object at 0x7f6fcf33bf70>, estimator=ridge_cds_dt, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x7f6feb014340>, model_only=True, return_train_score=False, kwargs={})
+2023-06-30 17:07:53,349:INFO:Checking exceptions
+2023-06-30 17:07:53,349:INFO:Importing libraries
+2023-06-30 17:07:53,349:INFO:Copying training dataset
+2023-06-30 17:07:53,353:INFO:Defining folds
+2023-06-30 17:07:53,354:INFO:Declaring metric variables
+2023-06-30 17:07:53,358:INFO:Importing untrained model
+2023-06-30 17:07:53,362:INFO:Ridge w/ Cond. Deseasonalize & Detrending Imported successfully
+2023-06-30 17:07:53,370:INFO:Starting cross validation
+2023-06-30 17:07:53,371:INFO:Cross validating with ExpandingWindowSplitter(fh=ForecastingHorizon([1, 2], dtype='int64', is_relative=True),
+                        initial_window=136, step_length=2), n_jobs=-1
+2023-06-30 17:07:53,717:INFO:Calculating mean and std
+2023-06-30 17:07:53,718:INFO:Creating metrics dataframe
+2023-06-30 17:07:53,722:INFO:Uploading results into container
+2023-06-30 17:07:53,723:INFO:Uploading model into container now
+2023-06-30 17:07:53,723:INFO:_master_model_container: 14
+2023-06-30 17:07:53,723:INFO:_display_container: 2
+2023-06-30 17:07:53,726:INFO:BaseCdsDtForecaster(fe_target_rr=[WindowSummarizer(lag_feature={'lag': [12, 11,
+                                                                        10, 9,
+                                                                        8, 7, 6,
+                                                                        5, 4, 3,
+                                                                        2, 1]},
+                                                   n_jobs=1)],
+                    regressor=Ridge(random_state=42), sp=12, window_length=12)
+2023-06-30 17:07:53,726:INFO:create_model() successfully completed......................................
+2023-06-30 17:07:53,879:INFO:SubProcess create_model() end ==================================
+2023-06-30 17:07:53,879:INFO:Creating metrics dataframe
+2023-06-30 17:07:53,894:INFO:Initializing Lasso w/ Cond. Deseasonalize & Detrending
+2023-06-30 17:07:53,894:INFO:Total runtime is 0.601347327232361 minutes
+2023-06-30 17:07:53,898:INFO:SubProcess create_model() called ==================================
+2023-06-30 17:07:53,898:INFO:Initializing create_model()
+2023-06-30 17:07:53,898:INFO:create_model(self=<pycaret.time_series.forecasting.oop.TSForecastingExperiment object at 0x7f6fcf33bf70>, estimator=lasso_cds_dt, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x7f6feb014340>, model_only=True, return_train_score=False, kwargs={})
+2023-06-30 17:07:53,898:INFO:Checking exceptions
+2023-06-30 17:07:53,898:INFO:Importing libraries
+2023-06-30 17:07:53,899:INFO:Copying training dataset
+2023-06-30 17:07:53,903:INFO:Defining folds
+2023-06-30 17:07:53,903:INFO:Declaring metric variables
+2023-06-30 17:07:53,907:INFO:Importing untrained model
+2023-06-30 17:07:53,911:INFO:Lasso w/ Cond. Deseasonalize & Detrending Imported successfully
+2023-06-30 17:07:53,919:INFO:Starting cross validation
+2023-06-30 17:07:53,920:INFO:Cross validating with ExpandingWindowSplitter(fh=ForecastingHorizon([1, 2], dtype='int64', is_relative=True),
+                        initial_window=136, step_length=2), n_jobs=-1
+2023-06-30 17:07:54,143:INFO:Calculating mean and std
+2023-06-30 17:07:54,144:INFO:Creating metrics dataframe
+2023-06-30 17:07:54,150:INFO:Uploading results into container
+2023-06-30 17:07:54,150:INFO:Uploading model into container now
+2023-06-30 17:07:54,151:INFO:_master_model_container: 15
+2023-06-30 17:07:54,151:INFO:_display_container: 2
+2023-06-30 17:07:54,153:INFO:BaseCdsDtForecaster(fe_target_rr=[WindowSummarizer(lag_feature={'lag': [12, 11,
+                                                                        10, 9,
+                                                                        8, 7, 6,
+                                                                        5, 4, 3,
+                                                                        2, 1]},
+                                                   n_jobs=1)],
+                    regressor=Lasso(random_state=42), sp=12, window_length=12)
+2023-06-30 17:07:54,154:INFO:create_model() successfully completed......................................
+2023-06-30 17:07:54,383:INFO:SubProcess create_model() end ==================================
+2023-06-30 17:07:54,383:INFO:Creating metrics dataframe
+2023-06-30 17:07:54,398:INFO:Initializing Lasso Least Angular Regressor w/ Cond. Deseasonalize & Detrending
+2023-06-30 17:07:54,399:INFO:Total runtime is 0.6097555438677471 minutes
+2023-06-30 17:07:54,402:INFO:SubProcess create_model() called ==================================
+2023-06-30 17:07:54,403:INFO:Initializing create_model()
+2023-06-30 17:07:54,403:INFO:create_model(self=<pycaret.time_series.forecasting.oop.TSForecastingExperiment object at 0x7f6fcf33bf70>, estimator=llar_cds_dt, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x7f6feb014340>, model_only=True, return_train_score=False, kwargs={})
+2023-06-30 17:07:54,403:INFO:Checking exceptions
+2023-06-30 17:07:54,403:INFO:Importing libraries
+2023-06-30 17:07:54,403:INFO:Copying training dataset
+2023-06-30 17:07:54,407:INFO:Defining folds
+2023-06-30 17:07:54,407:INFO:Declaring metric variables
+2023-06-30 17:07:54,411:INFO:Importing untrained model
+2023-06-30 17:07:54,415:INFO:Lasso Least Angular Regressor w/ Cond. Deseasonalize & Detrending Imported successfully
+2023-06-30 17:07:54,422:INFO:Starting cross validation
+2023-06-30 17:07:54,423:INFO:Cross validating with ExpandingWindowSplitter(fh=ForecastingHorizon([1, 2], dtype='int64', is_relative=True),
+                        initial_window=136, step_length=2), n_jobs=-1
+2023-06-30 17:07:54,667:INFO:Calculating mean and std
+2023-06-30 17:07:54,668:INFO:Creating metrics dataframe
+2023-06-30 17:07:54,673:INFO:Uploading results into container
+2023-06-30 17:07:54,673:INFO:Uploading model into container now
+2023-06-30 17:07:54,674:INFO:_master_model_container: 16
+2023-06-30 17:07:54,674:INFO:_display_container: 2
+2023-06-30 17:07:54,677:INFO:BaseCdsDtForecaster(fe_target_rr=[WindowSummarizer(lag_feature={'lag': [12, 11,
+                                                                        10, 9,
+                                                                        8, 7, 6,
+                                                                        5, 4, 3,
+                                                                        2, 1]},
+                                                   n_jobs=1)],
+                    regressor=LassoLars(random_state=42), sp=12,
+                    window_length=12)
+2023-06-30 17:07:54,677:INFO:create_model() successfully completed......................................
+2023-06-30 17:07:54,951:INFO:SubProcess create_model() end ==================================
+2023-06-30 17:07:54,951:INFO:Creating metrics dataframe
+2023-06-30 17:07:54,967:INFO:Initializing Bayesian Ridge w/ Cond. Deseasonalize & Detrending
+2023-06-30 17:07:54,968:INFO:Total runtime is 0.6192373951276144 minutes
+2023-06-30 17:07:54,971:INFO:SubProcess create_model() called ==================================
+2023-06-30 17:07:54,971:INFO:Initializing create_model()
+2023-06-30 17:07:54,971:INFO:create_model(self=<pycaret.time_series.forecasting.oop.TSForecastingExperiment object at 0x7f6fcf33bf70>, estimator=br_cds_dt, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x7f6feb014340>, model_only=True, return_train_score=False, kwargs={})
+2023-06-30 17:07:54,972:INFO:Checking exceptions
+2023-06-30 17:07:54,972:INFO:Importing libraries
+2023-06-30 17:07:54,972:INFO:Copying training dataset
+2023-06-30 17:07:54,976:INFO:Defining folds
+2023-06-30 17:07:54,976:INFO:Declaring metric variables
+2023-06-30 17:07:54,980:INFO:Importing untrained model
+2023-06-30 17:07:54,984:INFO:Bayesian Ridge w/ Cond. Deseasonalize & Detrending Imported successfully
+2023-06-30 17:07:54,991:INFO:Starting cross validation
+2023-06-30 17:07:54,992:INFO:Cross validating with ExpandingWindowSplitter(fh=ForecastingHorizon([1, 2], dtype='int64', is_relative=True),
+                        initial_window=136, step_length=2), n_jobs=-1
+2023-06-30 17:07:55,230:INFO:Calculating mean and std
+2023-06-30 17:07:55,232:INFO:Creating metrics dataframe
+2023-06-30 17:07:55,236:INFO:Uploading results into container
+2023-06-30 17:07:55,236:INFO:Uploading model into container now
+2023-06-30 17:07:55,237:INFO:_master_model_container: 17
+2023-06-30 17:07:55,237:INFO:_display_container: 2
+2023-06-30 17:07:55,240:INFO:BaseCdsDtForecaster(fe_target_rr=[WindowSummarizer(lag_feature={'lag': [12, 11,
+                                                                        10, 9,
+                                                                        8, 7, 6,
+                                                                        5, 4, 3,
+                                                                        2, 1]},
+                                                   n_jobs=1)],
+                    regressor=BayesianRidge(), sp=12, window_length=12)
+2023-06-30 17:07:55,240:INFO:create_model() successfully completed......................................
+2023-06-30 17:07:55,464:INFO:SubProcess create_model() end ==================================
+2023-06-30 17:07:55,464:INFO:Creating metrics dataframe
+2023-06-30 17:07:55,481:INFO:Initializing Huber w/ Cond. Deseasonalize & Detrending
+2023-06-30 17:07:55,481:INFO:Total runtime is 0.6278012990951539 minutes
+2023-06-30 17:07:55,486:INFO:SubProcess create_model() called ==================================
+2023-06-30 17:07:55,486:INFO:Initializing create_model()
+2023-06-30 17:07:55,487:INFO:create_model(self=<pycaret.time_series.forecasting.oop.TSForecastingExperiment object at 0x7f6fcf33bf70>, estimator=huber_cds_dt, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x7f6feb014340>, model_only=True, return_train_score=False, kwargs={})
+2023-06-30 17:07:55,487:INFO:Checking exceptions
+2023-06-30 17:07:55,487:INFO:Importing libraries
+2023-06-30 17:07:55,487:INFO:Copying training dataset
+2023-06-30 17:07:55,491:INFO:Defining folds
+2023-06-30 17:07:55,491:INFO:Declaring metric variables
+2023-06-30 17:07:55,496:INFO:Importing untrained model
+2023-06-30 17:07:55,500:INFO:Huber w/ Cond. Deseasonalize & Detrending Imported successfully
+2023-06-30 17:07:55,507:INFO:Starting cross validation
+2023-06-30 17:07:55,508:INFO:Cross validating with ExpandingWindowSplitter(fh=ForecastingHorizon([1, 2], dtype='int64', is_relative=True),
+                        initial_window=136, step_length=2), n_jobs=-1
+2023-06-30 17:07:55,760:INFO:Calculating mean and std
+2023-06-30 17:07:55,762:INFO:Creating metrics dataframe
+2023-06-30 17:07:55,766:INFO:Uploading results into container
+2023-06-30 17:07:55,766:INFO:Uploading model into container now
+2023-06-30 17:07:55,767:INFO:_master_model_container: 18
+2023-06-30 17:07:55,767:INFO:_display_container: 2
+2023-06-30 17:07:55,770:INFO:BaseCdsDtForecaster(fe_target_rr=[WindowSummarizer(lag_feature={'lag': [12, 11,
+                                                                        10, 9,
+                                                                        8, 7, 6,
+                                                                        5, 4, 3,
+                                                                        2, 1]},
+                                                   n_jobs=1)],
+                    regressor=HuberRegressor(), sp=12, window_length=12)
+2023-06-30 17:07:55,770:INFO:create_model() successfully completed......................................
+2023-06-30 17:07:55,931:INFO:SubProcess create_model() end ==================================
+2023-06-30 17:07:55,931:INFO:Creating metrics dataframe
+2023-06-30 17:07:56,019:INFO:Initializing Orthogonal Matching Pursuit w/ Cond. Deseasonalize & Detrending
+2023-06-30 17:07:56,019:INFO:Total runtime is 0.6367596308390301 minutes
+2023-06-30 17:07:56,023:INFO:SubProcess create_model() called ==================================
+2023-06-30 17:07:56,023:INFO:Initializing create_model()
+2023-06-30 17:07:56,023:INFO:create_model(self=<pycaret.time_series.forecasting.oop.TSForecastingExperiment object at 0x7f6fcf33bf70>, estimator=omp_cds_dt, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x7f6feb014340>, model_only=True, return_train_score=False, kwargs={})
+2023-06-30 17:07:56,024:INFO:Checking exceptions
+2023-06-30 17:07:56,024:INFO:Importing libraries
+2023-06-30 17:07:56,024:INFO:Copying training dataset
+2023-06-30 17:07:56,029:INFO:Defining folds
+2023-06-30 17:07:56,029:INFO:Declaring metric variables
+2023-06-30 17:07:56,034:INFO:Importing untrained model
+2023-06-30 17:07:56,038:INFO:Orthogonal Matching Pursuit w/ Cond. Deseasonalize & Detrending Imported successfully
+2023-06-30 17:07:56,045:INFO:Starting cross validation
+2023-06-30 17:07:56,047:INFO:Cross validating with ExpandingWindowSplitter(fh=ForecastingHorizon([1, 2], dtype='int64', is_relative=True),
+                        initial_window=136, step_length=2), n_jobs=-1
+2023-06-30 17:07:56,287:INFO:Calculating mean and std
+2023-06-30 17:07:56,288:INFO:Creating metrics dataframe
+2023-06-30 17:07:56,293:INFO:Uploading results into container
+2023-06-30 17:07:56,293:INFO:Uploading model into container now
+2023-06-30 17:07:56,293:INFO:_master_model_container: 19
+2023-06-30 17:07:56,294:INFO:_display_container: 2
+2023-06-30 17:07:56,296:INFO:BaseCdsDtForecaster(fe_target_rr=[WindowSummarizer(lag_feature={'lag': [12, 11,
+                                                                        10, 9,
+                                                                        8, 7, 6,
+                                                                        5, 4, 3,
+                                                                        2, 1]},
+                                                   n_jobs=1)],
+                    regressor=OrthogonalMatchingPursuit(), sp=12,
+                    window_length=12)
+2023-06-30 17:07:56,296:INFO:create_model() successfully completed......................................
+2023-06-30 17:07:56,454:INFO:SubProcess create_model() end ==================================
+2023-06-30 17:07:56,454:INFO:Creating metrics dataframe
+2023-06-30 17:07:56,471:INFO:Initializing K Neighbors w/ Cond. Deseasonalize & Detrending
+2023-06-30 17:07:56,471:INFO:Total runtime is 0.6442925890286765 minutes
+2023-06-30 17:07:56,475:INFO:SubProcess create_model() called ==================================
+2023-06-30 17:07:56,475:INFO:Initializing create_model()
+2023-06-30 17:07:56,475:INFO:create_model(self=<pycaret.time_series.forecasting.oop.TSForecastingExperiment object at 0x7f6fcf33bf70>, estimator=knn_cds_dt, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x7f6feb014340>, model_only=True, return_train_score=False, kwargs={})
+2023-06-30 17:07:56,476:INFO:Checking exceptions
+2023-06-30 17:07:56,476:INFO:Importing libraries
+2023-06-30 17:07:56,476:INFO:Copying training dataset
+2023-06-30 17:07:56,480:INFO:Defining folds
+2023-06-30 17:07:56,480:INFO:Declaring metric variables
+2023-06-30 17:07:56,485:INFO:Importing untrained model
+2023-06-30 17:07:56,489:INFO:K Neighbors w/ Cond. Deseasonalize & Detrending Imported successfully
+2023-06-30 17:07:56,498:INFO:Starting cross validation
+2023-06-30 17:07:56,499:INFO:Cross validating with ExpandingWindowSplitter(fh=ForecastingHorizon([1, 2], dtype='int64', is_relative=True),
+                        initial_window=136, step_length=2), n_jobs=-1
+2023-06-30 17:07:56,864:INFO:Calculating mean and std
+2023-06-30 17:07:56,865:INFO:Creating metrics dataframe
+2023-06-30 17:07:56,869:INFO:Uploading results into container
+2023-06-30 17:07:56,870:INFO:Uploading model into container now
+2023-06-30 17:07:56,870:INFO:_master_model_container: 20
+2023-06-30 17:07:56,871:INFO:_display_container: 2
+2023-06-30 17:07:56,874:INFO:BaseCdsDtForecaster(fe_target_rr=[WindowSummarizer(lag_feature={'lag': [12, 11,
+                                                                        10, 9,
+                                                                        8, 7, 6,
+                                                                        5, 4, 3,
+                                                                        2, 1]},
+                                                   n_jobs=1)],
+                    regressor=KNeighborsRegressor(n_jobs=-1), sp=12,
+                    window_length=12)
+2023-06-30 17:07:56,874:INFO:create_model() successfully completed......................................
+2023-06-30 17:07:57,039:INFO:SubProcess create_model() end ==================================
+2023-06-30 17:07:57,039:INFO:Creating metrics dataframe
+2023-06-30 17:07:57,056:INFO:Initializing Decision Tree w/ Cond. Deseasonalize & Detrending
+2023-06-30 17:07:57,056:INFO:Total runtime is 0.6540431539217633 minutes
+2023-06-30 17:07:57,060:INFO:SubProcess create_model() called ==================================
+2023-06-30 17:07:57,060:INFO:Initializing create_model()
+2023-06-30 17:07:57,060:INFO:create_model(self=<pycaret.time_series.forecasting.oop.TSForecastingExperiment object at 0x7f6fcf33bf70>, estimator=dt_cds_dt, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x7f6feb014340>, model_only=True, return_train_score=False, kwargs={})
+2023-06-30 17:07:57,060:INFO:Checking exceptions
+2023-06-30 17:07:57,060:INFO:Importing libraries
+2023-06-30 17:07:57,061:INFO:Copying training dataset
+2023-06-30 17:07:57,067:INFO:Defining folds
+2023-06-30 17:07:57,067:INFO:Declaring metric variables
+2023-06-30 17:07:57,071:INFO:Importing untrained model
+2023-06-30 17:07:57,075:INFO:Decision Tree w/ Cond. Deseasonalize & Detrending Imported successfully
+2023-06-30 17:07:57,082:INFO:Starting cross validation
+2023-06-30 17:07:57,083:INFO:Cross validating with ExpandingWindowSplitter(fh=ForecastingHorizon([1, 2], dtype='int64', is_relative=True),
+                        initial_window=136, step_length=2), n_jobs=-1
+2023-06-30 17:07:57,407:INFO:Calculating mean and std
+2023-06-30 17:07:57,409:INFO:Creating metrics dataframe
+2023-06-30 17:07:57,413:INFO:Uploading results into container
+2023-06-30 17:07:57,413:INFO:Uploading model into container now
+2023-06-30 17:07:57,414:INFO:_master_model_container: 21
+2023-06-30 17:07:57,414:INFO:_display_container: 2
+2023-06-30 17:07:57,418:INFO:BaseCdsDtForecaster(fe_target_rr=[WindowSummarizer(lag_feature={'lag': [12, 11,
+                                                                        10, 9,
+                                                                        8, 7, 6,
+                                                                        5, 4, 3,
+                                                                        2, 1]},
+                                                   n_jobs=1)],
+                    regressor=DecisionTreeRegressor(random_state=42), sp=12,
+                    window_length=12)
+2023-06-30 17:07:57,419:INFO:create_model() successfully completed......................................
+2023-06-30 17:07:57,600:INFO:SubProcess create_model() end ==================================
+2023-06-30 17:07:57,600:INFO:Creating metrics dataframe
+2023-06-30 17:07:57,617:INFO:Initializing Random Forest w/ Cond. Deseasonalize & Detrending
+2023-06-30 17:07:57,618:INFO:Total runtime is 0.6634033958117169 minutes
+2023-06-30 17:07:57,623:INFO:SubProcess create_model() called ==================================
+2023-06-30 17:07:57,623:INFO:Initializing create_model()
+2023-06-30 17:07:57,623:INFO:create_model(self=<pycaret.time_series.forecasting.oop.TSForecastingExperiment object at 0x7f6fcf33bf70>, estimator=rf_cds_dt, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x7f6feb014340>, model_only=True, return_train_score=False, kwargs={})
+2023-06-30 17:07:57,623:INFO:Checking exceptions
+2023-06-30 17:07:57,623:INFO:Importing libraries
+2023-06-30 17:07:57,623:INFO:Copying training dataset
+2023-06-30 17:07:57,629:INFO:Defining folds
+2023-06-30 17:07:57,629:INFO:Declaring metric variables
+2023-06-30 17:07:57,633:INFO:Importing untrained model
+2023-06-30 17:07:57,637:INFO:Random Forest w/ Cond. Deseasonalize & Detrending Imported successfully
+2023-06-30 17:07:57,645:INFO:Starting cross validation
+2023-06-30 17:07:57,646:INFO:Cross validating with ExpandingWindowSplitter(fh=ForecastingHorizon([1, 2], dtype='int64', is_relative=True),
+                        initial_window=136, step_length=2), n_jobs=-1
+2023-06-30 17:07:58,281:INFO:Calculating mean and std
+2023-06-30 17:07:58,283:INFO:Creating metrics dataframe
+2023-06-30 17:07:58,287:INFO:Uploading results into container
+2023-06-30 17:07:58,288:INFO:Uploading model into container now
+2023-06-30 17:07:58,288:INFO:_master_model_container: 22
+2023-06-30 17:07:58,288:INFO:_display_container: 2
+2023-06-30 17:07:58,291:INFO:BaseCdsDtForecaster(fe_target_rr=[WindowSummarizer(lag_feature={'lag': [12, 11,
+                                                                        10, 9,
+                                                                        8, 7, 6,
+                                                                        5, 4, 3,
+                                                                        2, 1]},
+                                                   n_jobs=1)],
+                    regressor=RandomForestRegressor(n_jobs=-1, random_state=42),
+                    sp=12, window_length=12)
+2023-06-30 17:07:58,291:INFO:create_model() successfully completed......................................
+2023-06-30 17:07:58,514:INFO:SubProcess create_model() end ==================================
+2023-06-30 17:07:58,515:INFO:Creating metrics dataframe
+2023-06-30 17:07:58,532:INFO:Initializing Extra Trees w/ Cond. Deseasonalize & Detrending
+2023-06-30 17:07:58,532:INFO:Total runtime is 0.6786448558171593 minutes
+2023-06-30 17:07:58,536:INFO:SubProcess create_model() called ==================================
+2023-06-30 17:07:58,536:INFO:Initializing create_model()
+2023-06-30 17:07:58,536:INFO:create_model(self=<pycaret.time_series.forecasting.oop.TSForecastingExperiment object at 0x7f6fcf33bf70>, estimator=et_cds_dt, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x7f6feb014340>, model_only=True, return_train_score=False, kwargs={})
+2023-06-30 17:07:58,537:INFO:Checking exceptions
+2023-06-30 17:07:58,537:INFO:Importing libraries
+2023-06-30 17:07:58,537:INFO:Copying training dataset
+2023-06-30 17:07:58,543:INFO:Defining folds
+2023-06-30 17:07:58,543:INFO:Declaring metric variables
+2023-06-30 17:07:58,547:INFO:Importing untrained model
+2023-06-30 17:07:58,551:INFO:Extra Trees w/ Cond. Deseasonalize & Detrending Imported successfully
+2023-06-30 17:07:58,558:INFO:Starting cross validation
+2023-06-30 17:07:58,559:INFO:Cross validating with ExpandingWindowSplitter(fh=ForecastingHorizon([1, 2], dtype='int64', is_relative=True),
+                        initial_window=136, step_length=2), n_jobs=-1
+2023-06-30 17:07:59,077:INFO:Calculating mean and std
+2023-06-30 17:07:59,078:INFO:Creating metrics dataframe
+2023-06-30 17:07:59,082:INFO:Uploading results into container
+2023-06-30 17:07:59,082:INFO:Uploading model into container now
+2023-06-30 17:07:59,083:INFO:_master_model_container: 23
+2023-06-30 17:07:59,084:INFO:_display_container: 2
+2023-06-30 17:07:59,087:INFO:BaseCdsDtForecaster(fe_target_rr=[WindowSummarizer(lag_feature={'lag': [12, 11,
+                                                                        10, 9,
+                                                                        8, 7, 6,
+                                                                        5, 4, 3,
+                                                                        2, 1]},
+                                                   n_jobs=1)],
+                    regressor=ExtraTreesRegressor(n_jobs=-1, random_state=42),
+                    sp=12, window_length=12)
+2023-06-30 17:07:59,088:INFO:create_model() successfully completed......................................
+2023-06-30 17:07:59,246:INFO:SubProcess create_model() end ==================================
+2023-06-30 17:07:59,246:INFO:Creating metrics dataframe
+2023-06-30 17:07:59,264:INFO:Initializing Gradient Boosting w/ Cond. Deseasonalize & Detrending
+2023-06-30 17:07:59,264:INFO:Total runtime is 0.6908514022827151 minutes
+2023-06-30 17:07:59,269:INFO:SubProcess create_model() called ==================================
+2023-06-30 17:07:59,270:INFO:Initializing create_model()
+2023-06-30 17:07:59,270:INFO:create_model(self=<pycaret.time_series.forecasting.oop.TSForecastingExperiment object at 0x7f6fcf33bf70>, estimator=gbr_cds_dt, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x7f6feb014340>, model_only=True, return_train_score=False, kwargs={})
+2023-06-30 17:07:59,270:INFO:Checking exceptions
+2023-06-30 17:07:59,270:INFO:Importing libraries
+2023-06-30 17:07:59,270:INFO:Copying training dataset
+2023-06-30 17:07:59,275:INFO:Defining folds
+2023-06-30 17:07:59,276:INFO:Declaring metric variables
+2023-06-30 17:07:59,280:INFO:Importing untrained model
+2023-06-30 17:07:59,285:INFO:Gradient Boosting w/ Cond. Deseasonalize & Detrending Imported successfully
+2023-06-30 17:07:59,293:INFO:Starting cross validation
+2023-06-30 17:07:59,294:INFO:Cross validating with ExpandingWindowSplitter(fh=ForecastingHorizon([1, 2], dtype='int64', is_relative=True),
+                        initial_window=136, step_length=2), n_jobs=-1
+2023-06-30 17:07:59,790:INFO:Calculating mean and std
+2023-06-30 17:07:59,791:INFO:Creating metrics dataframe
+2023-06-30 17:07:59,796:INFO:Uploading results into container
+2023-06-30 17:07:59,796:INFO:Uploading model into container now
+2023-06-30 17:07:59,797:INFO:_master_model_container: 24
+2023-06-30 17:07:59,797:INFO:_display_container: 2
+2023-06-30 17:07:59,800:INFO:BaseCdsDtForecaster(fe_target_rr=[WindowSummarizer(lag_feature={'lag': [12, 11,
+                                                                        10, 9,
+                                                                        8, 7, 6,
+                                                                        5, 4, 3,
+                                                                        2, 1]},
+                                                   n_jobs=1)],
+                    regressor=GradientBoostingRegressor(random_state=42), sp=12,
+                    window_length=12)
+2023-06-30 17:07:59,800:INFO:create_model() successfully completed......................................
+2023-06-30 17:07:59,958:INFO:SubProcess create_model() end ==================================
+2023-06-30 17:07:59,958:INFO:Creating metrics dataframe
+2023-06-30 17:07:59,977:INFO:Initializing AdaBoost w/ Cond. Deseasonalize & Detrending
+2023-06-30 17:07:59,977:INFO:Total runtime is 0.7027250130971275 minutes
+2023-06-30 17:07:59,980:INFO:SubProcess create_model() called ==================================
+2023-06-30 17:07:59,981:INFO:Initializing create_model()
+2023-06-30 17:07:59,981:INFO:create_model(self=<pycaret.time_series.forecasting.oop.TSForecastingExperiment object at 0x7f6fcf33bf70>, estimator=ada_cds_dt, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x7f6feb014340>, model_only=True, return_train_score=False, kwargs={})
+2023-06-30 17:07:59,981:INFO:Checking exceptions
+2023-06-30 17:07:59,981:INFO:Importing libraries
+2023-06-30 17:07:59,981:INFO:Copying training dataset
+2023-06-30 17:07:59,985:INFO:Defining folds
+2023-06-30 17:07:59,986:INFO:Declaring metric variables
+2023-06-30 17:07:59,990:INFO:Importing untrained model
+2023-06-30 17:07:59,994:INFO:AdaBoost w/ Cond. Deseasonalize & Detrending Imported successfully
+2023-06-30 17:08:00,002:INFO:Starting cross validation
+2023-06-30 17:08:00,003:INFO:Cross validating with ExpandingWindowSplitter(fh=ForecastingHorizon([1, 2], dtype='int64', is_relative=True),
+                        initial_window=136, step_length=2), n_jobs=-1
+2023-06-30 17:08:00,346:INFO:Calculating mean and std
+2023-06-30 17:08:00,348:INFO:Creating metrics dataframe
+2023-06-30 17:08:00,353:INFO:Uploading results into container
+2023-06-30 17:08:00,353:INFO:Uploading model into container now
+2023-06-30 17:08:00,354:INFO:_master_model_container: 25
+2023-06-30 17:08:00,354:INFO:_display_container: 2
+2023-06-30 17:08:00,357:INFO:BaseCdsDtForecaster(fe_target_rr=[WindowSummarizer(lag_feature={'lag': [12, 11,
+                                                                        10, 9,
+                                                                        8, 7, 6,
+                                                                        5, 4, 3,
+                                                                        2, 1]},
+                                                   n_jobs=1)],
+                    regressor=AdaBoostRegressor(random_state=42), sp=12,
+                    window_length=12)
+2023-06-30 17:08:00,357:INFO:create_model() successfully completed......................................
+2023-06-30 17:08:00,513:INFO:SubProcess create_model() end ==================================
+2023-06-30 17:08:00,513:INFO:Creating metrics dataframe
+2023-06-30 17:08:00,531:INFO:Initializing Extreme Gradient Boosting w/ Cond. Deseasonalize & Detrending
+2023-06-30 17:08:00,531:INFO:Total runtime is 0.7119625528653465 minutes
+2023-06-30 17:08:00,535:INFO:SubProcess create_model() called ==================================
+2023-06-30 17:08:00,535:INFO:Initializing create_model()
+2023-06-30 17:08:00,535:INFO:create_model(self=<pycaret.time_series.forecasting.oop.TSForecastingExperiment object at 0x7f6fcf33bf70>, estimator=xgboost_cds_dt, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x7f6feb014340>, model_only=True, return_train_score=False, kwargs={})
+2023-06-30 17:08:00,535:INFO:Checking exceptions
+2023-06-30 17:08:00,536:INFO:Importing libraries
+2023-06-30 17:08:00,536:INFO:Copying training dataset
+2023-06-30 17:08:00,540:INFO:Defining folds
+2023-06-30 17:08:00,540:INFO:Declaring metric variables
+2023-06-30 17:08:00,544:INFO:Importing untrained model
+2023-06-30 17:08:00,549:INFO:Extreme Gradient Boosting w/ Cond. Deseasonalize & Detrending Imported successfully
+2023-06-30 17:08:00,556:INFO:Starting cross validation
+2023-06-30 17:08:00,557:INFO:Cross validating with ExpandingWindowSplitter(fh=ForecastingHorizon([1, 2], dtype='int64', is_relative=True),
+                        initial_window=136, step_length=2), n_jobs=-1
+2023-06-30 17:08:01,104:INFO:Calculating mean and std
+2023-06-30 17:08:01,106:INFO:Creating metrics dataframe
+2023-06-30 17:08:01,110:INFO:Uploading results into container
+2023-06-30 17:08:01,110:INFO:Uploading model into container now
+2023-06-30 17:08:01,111:INFO:_master_model_container: 26
+2023-06-30 17:08:01,111:INFO:_display_container: 2
+2023-06-30 17:08:01,117:INFO:BaseCdsDtForecaster(fe_target_rr=[WindowSummarizer(lag_feature={'lag': [12, 11,
+                                                                        10, 9,
+                                                                        8, 7, 6,
+                                                                        5, 4, 3,
+                                                                        2, 1]},
+                                                   n_jobs=1)],
+                    regressor=XGBRegressor(base_score=None, booster='gbtree', callbacks=None,
+             colsample_bylevel=None, colsample_bynode=None,
+             colsample_bytree=None, early_stopping_rounds=None,
+             enable_categorical=False, eval_metric=None, feature_types=None,
+             gamma=None, gp...e, importance_type=None,
+             interaction_constraints=None, learning_rate=None, max_bin=None,
+             max_cat_threshold=None, max_cat_to_onehot=None,
+             max_delta_step=None, max_depth=None, max_leaves=None,
+             min_child_weight=None, missing=nan, monotone_constraints=None,
+             n_estimators=100, n_jobs=-1, num_parallel_tree=None,
+             predictor=None, random_state=42, ...),
+                    sp=12, window_length=12)
+2023-06-30 17:08:01,117:INFO:create_model() successfully completed......................................
+2023-06-30 17:08:01,272:INFO:SubProcess create_model() end ==================================
+2023-06-30 17:08:01,273:INFO:Creating metrics dataframe
+2023-06-30 17:08:01,291:INFO:Initializing Light Gradient Boosting w/ Cond. Deseasonalize & Detrending
+2023-06-30 17:08:01,291:INFO:Total runtime is 0.724628802140554 minutes
+2023-06-30 17:08:01,296:INFO:SubProcess create_model() called ==================================
+2023-06-30 17:08:01,296:INFO:Initializing create_model()
+2023-06-30 17:08:01,297:INFO:create_model(self=<pycaret.time_series.forecasting.oop.TSForecastingExperiment object at 0x7f6fcf33bf70>, estimator=lightgbm_cds_dt, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x7f6feb014340>, model_only=True, return_train_score=False, kwargs={})
+2023-06-30 17:08:01,297:INFO:Checking exceptions
+2023-06-30 17:08:01,297:INFO:Importing libraries
+2023-06-30 17:08:01,297:INFO:Copying training dataset
+2023-06-30 17:08:01,303:INFO:Defining folds
+2023-06-30 17:08:01,303:INFO:Declaring metric variables
+2023-06-30 17:08:01,308:INFO:Importing untrained model
+2023-06-30 17:08:01,314:INFO:Light Gradient Boosting w/ Cond. Deseasonalize & Detrending Imported successfully
+2023-06-30 17:08:01,322:INFO:Starting cross validation
+2023-06-30 17:08:01,323:INFO:Cross validating with ExpandingWindowSplitter(fh=ForecastingHorizon([1, 2], dtype='int64', is_relative=True),
+                        initial_window=136, step_length=2), n_jobs=-1
+2023-06-30 17:08:01,847:INFO:Calculating mean and std
+2023-06-30 17:08:01,848:INFO:Creating metrics dataframe
+2023-06-30 17:08:01,853:INFO:Uploading results into container
+2023-06-30 17:08:01,853:INFO:Uploading model into container now
+2023-06-30 17:08:01,853:INFO:_master_model_container: 27
+2023-06-30 17:08:01,854:INFO:_display_container: 2
+2023-06-30 17:08:01,856:INFO:BaseCdsDtForecaster(fe_target_rr=[WindowSummarizer(lag_feature={'lag': [12, 11,
+                                                                        10, 9,
+                                                                        8, 7, 6,
+                                                                        5, 4, 3,
+                                                                        2, 1]},
+                                                   n_jobs=1)],
+                    regressor=LGBMRegressor(random_state=42), sp=12,
+                    window_length=12)
+2023-06-30 17:08:01,857:INFO:create_model() successfully completed......................................
+2023-06-30 17:08:02,112:INFO:SubProcess create_model() end ==================================
+2023-06-30 17:08:02,112:INFO:Creating metrics dataframe
+2023-06-30 17:08:02,130:INFO:Initializing CatBoost Regressor w/ Cond. Deseasonalize & Detrending
+2023-06-30 17:08:02,130:INFO:Total runtime is 0.7386144240697228 minutes
+2023-06-30 17:08:02,134:INFO:SubProcess create_model() called ==================================
+2023-06-30 17:08:02,134:INFO:Initializing create_model()
+2023-06-30 17:08:02,134:INFO:create_model(self=<pycaret.time_series.forecasting.oop.TSForecastingExperiment object at 0x7f6fcf33bf70>, estimator=catboost_cds_dt, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x7f6feb014340>, model_only=True, return_train_score=False, kwargs={})
+2023-06-30 17:08:02,135:INFO:Checking exceptions
+2023-06-30 17:08:02,135:INFO:Importing libraries
+2023-06-30 17:08:02,135:INFO:Copying training dataset
+2023-06-30 17:08:02,139:INFO:Defining folds
+2023-06-30 17:08:02,139:INFO:Declaring metric variables
+2023-06-30 17:08:02,143:INFO:Importing untrained model
+2023-06-30 17:08:02,147:INFO:CatBoost Regressor w/ Cond. Deseasonalize & Detrending Imported successfully
+2023-06-30 17:08:02,155:INFO:Starting cross validation
+2023-06-30 17:08:02,156:INFO:Cross validating with ExpandingWindowSplitter(fh=ForecastingHorizon([1, 2], dtype='int64', is_relative=True),
+                        initial_window=136, step_length=2), n_jobs=-1
+2023-06-30 17:08:07,155:INFO:Calculating mean and std
+2023-06-30 17:08:07,157:INFO:Creating metrics dataframe
+2023-06-30 17:08:07,163:INFO:Uploading results into container
+2023-06-30 17:08:07,163:INFO:Uploading model into container now
+2023-06-30 17:08:07,164:INFO:_master_model_container: 28
+2023-06-30 17:08:07,164:INFO:_display_container: 2
+2023-06-30 17:08:07,167:INFO:BaseCdsDtForecaster(fe_target_rr=[WindowSummarizer(lag_feature={'lag': [12, 11,
+                                                                        10, 9,
+                                                                        8, 7, 6,
+                                                                        5, 4, 3,
+                                                                        2, 1]},
+                                                   n_jobs=1)],
+                    regressor=<catboost.core.CatBoostRegressor object at 0x7f6fcc11d030>,
+                    sp=12, window_length=12)
+2023-06-30 17:08:07,167:INFO:create_model() successfully completed......................................
+2023-06-30 17:08:07,339:INFO:SubProcess create_model() end ==================================
+2023-06-30 17:08:07,339:INFO:Creating metrics dataframe
+2023-06-30 17:08:07,368:INFO:Initializing create_model()
+2023-06-30 17:08:07,369:INFO:create_model(self=<pycaret.time_series.forecasting.oop.TSForecastingExperiment object at 0x7f6fcf33bf70>, estimator=STLForecaster(sp=12), fold=None, round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, kwargs={})
+2023-06-30 17:08:07,369:INFO:Checking exceptions
+2023-06-30 17:08:07,371:INFO:Importing libraries
+2023-06-30 17:08:07,371:INFO:Copying training dataset
+2023-06-30 17:08:07,374:INFO:Defining folds
+2023-06-30 17:08:07,375:INFO:Declaring metric variables
+2023-06-30 17:08:07,375:INFO:Importing untrained model
+2023-06-30 17:08:07,375:INFO:Declaring custom model
+2023-06-30 17:08:07,377:INFO:STLF Imported successfully
+2023-06-30 17:08:07,377:INFO:Cross validation set to False
+2023-06-30 17:08:07,377:INFO:Fitting Model
+2023-06-30 17:08:07,395:INFO:STLForecaster(sp=12)
+2023-06-30 17:08:07,395:INFO:create_model() successfully completed......................................
+2023-06-30 17:08:07,627:INFO:_master_model_container: 28
+2023-06-30 17:08:07,627:INFO:_display_container: 2
+2023-06-30 17:08:07,628:INFO:STLForecaster(sp=12)
+2023-06-30 17:08:07,628:INFO:compare_models() successfully completed......................................
